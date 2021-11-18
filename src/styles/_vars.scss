@@ -1,0 +1,54 @@
+$ds100: rgba(#1f2041, 1);
+$ds75: rgba(#1f2041, .75);
+$ds50: rgba(#1f2041, .5);
+$ds25: rgba(#1f2041, .25);
+$ds5: rgba(#1f2041, .05);
+$pur: #bc9cff;
+$gre: #6fcf97;
+
+@mixin field{
+    margin: 20px 0;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+@mixin pseudo{    
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+@mixin h1-font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $ds100;
+}
+@mixin h2-font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: $ds100;
+}
+@mixin h3-font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $ds100;
+}
+@mixin text-font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color:rgba(#1f2041, .75);
+}

@@ -1,0 +1,37 @@
+{
+  "name": "tryhard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "SET NODE_ENV=production&& webpack",
+    "construct": "SET NODE_ENV=development&& webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "air-datepicker": "^3.0.1",
+    "css-loader": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "html-webpack-pug-plugin": "^3.0.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.43.3",
+    "sass-loader": "^12.2.0",
+    "simple-pug-loader": "^0.2.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.3",
+    "jquery": "^3.6.0"
+  }
+}

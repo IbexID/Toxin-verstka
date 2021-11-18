@@ -1,0 +1,27 @@
+.register-form
+    p.register-form__heading Регистрация аккаунта
+    .register-form__cred
+        input.register-form__cred-input(placeholder='Имя' type='text')
+        input.register-form__cred-input(placeholder='Фамилия' type='text')
+    .register-form__sex
+        input.register-form__sex-input(type='radio' name='sex' value='male' id='male')
+        label.register-form__sex-label(for='male') Мужчина
+        input.register-form__sex-input(type='radio' name='sex' value='female' id='female')
+        label.register-form__sex-label(for='female') Женщина
+    .register-form__birthday
+        label.register-form__birthday-label(for='birthday-date') Дата рождения
+        input.register-form__birthday-input(type='date' placeholder='Д.ММ.ГГГГ')
+    .register-form__account
+        label.register-form__account-label(for='account') Данные для входа в сервис
+        input.register-form__account-input(type='email' placeholder='Email' id='account')
+        input.register-form__account-input(type='password' placeholder='Пароль' id='account')
+    .register-form__subscription
+        input.register-form__subscription-input(type='checkbox' id='subscribe')
+        label.register-form__subscription-label(for='subscribe') Получать спецпредложения
+    .register-form__buttons
+        button.register-form__button(type='submit')
+            p.register-form__button-text Перейти к оплате
+            span.material-icons.register-form__button-arrow arrow_forward
+    .register-form__login
+        p.register-form__login-text Уже есть аккаунт на Toxin
+        a.register-form__login-link Войти
