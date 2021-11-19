@@ -326,7 +326,8 @@
     }
 
     &__num {
-        margin-left: 25px;
+        margin-left: 21px;
+        padding-bottom: 2px;
     }
 }
 
@@ -875,34 +876,47 @@
 }
 
 .review{
+    display: flex;
+    margin-bottom: 40px;
     &__profile{
-        display: flex;
-
-    }
-    &__profile-avatar{
-    }
-    &__profile-img{
-        border-radius: 50%;
-        border: 2px solid #fff;
-
-    }
-    &__profile-info{
-        margin-left: 10px;
+        width: 48px;
+        margin-right: 0;
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
+        position: relative;
+
     }
-    &__profile-name{
+    &__profile-img{
+        width: 48px;
+        height: 48px;
+        max-width: 48px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+    &__like .like{
+        position: absolute;
+        left: 3px;
+        top: 63px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    &__info{
+        margin: -1px 10px 0 9px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__info-name{
+        margin-left: 1px;
         @include text-font;
         font-weight: 700;
     }
-    &__profile-date{
+    &__info-date{
         @include text-font;
+        margin-bottom: 10px;
     }
-    &__like .like{
-        margin-bottom: 0;
-    }
-    &__text{
+    &__info-text{
+        width: 653px;
+        margin-left: 1px;
         @include text-font;
     }
 }
