@@ -22,7 +22,7 @@ let apply = {
     }
 }
 // calendars for registration-form
-let arrival, departure;
+let arrival, departure, datedropdown;
 arrival = new AirDatepicker('#arrival', {
     onSelect({
         date
@@ -49,7 +49,20 @@ departure = new AirDatepicker('#departure', {
     buttons: ['clear', apply],
 
 })
+datedropdown = new AirDatepicker('#datedropdown', {
+    onSelect({
+        date
+    }) {
+        datedropdown.update({
+            minDate: date
+        })
+    },
+    minDate: new Date(),
+    autoClose: false,
+    range: true,
+    buttons: ['clear', apply]
 
+})
 
 $("#masked-text-field").inputmask({
     alias: "datetime",
