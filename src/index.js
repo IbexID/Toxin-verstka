@@ -95,16 +95,16 @@ $(".iqdropdown").iqDropdown({
         return `${itemCount.item1} ${text1}, ${itemCount.item2} ${text2}, ${itemCount.item3} ${text3}`;
     }
 });
+/* 
+  function declOfNum2(itemCount, totalItems) {  
+     var cases = [2, 0, 1, 1, 1, 2];  
+     return totalItems[ (itemCount%100>4 && itemCount%100<20)? 2 : cases[(itemCount%10<5)?itemCount%10:5] ];  
+ } */
 
-//  function declOfNum(itemCount, totalItems) {  
-//     var cases = [2, 0, 1, 1, 1, 2];  
-//     return totalItems[ (itemCount%100>4 && itemCount%100<20)? 2 : cases[(itemCount%10<5)?itemCount%10:5] ];  
-// }
-
-// $(".iqdropdown").iqDropdown({ 
-//     setSelectionText: function(itemCount, totalItems) {
-//         let text = this.selectionText;
-//         text = declOfNum(totalItems, ['гость', 'гостя', 'гостей']);
-//         return `${totalItems} ${text}`;
-//     },
-//  });
+ $(".iqdropdown-guest").iqDropdown({ 
+     setSelectionText: function(itemCount, totalItems) {
+         let text = this.selectionText;
+         text = declOfNum(totalItems, ['гость', 'гостя', 'гостей']);
+         return `${totalItems} ${text}`;
+     },
+  });

@@ -460,6 +460,9 @@
     &:hover {
         opacity: .5;
     }
+    &__force-hov:hover{
+        opacity: 1;
+    }
     &__icon-link {
         background: none;
         color: $pur;
