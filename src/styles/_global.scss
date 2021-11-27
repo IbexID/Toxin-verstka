@@ -51,7 +51,7 @@ input[type='text'],[type='email']{
         height: 44px;
         border: 1px solid $ds25;
         border-radius: 4px;
-		padding-left: 12px;
+		padding-left: 14px;
         &::placeholder {
             @include text-font;
             line-height: 18px;
@@ -61,12 +61,15 @@ input[type='text'],[type='email']{
             padding: 13px 265px 13px 0px;
         }
         &:hover,
-        &:active{
+        &:focus{
 			border: 1px solid $ds50;
+			outline: none;
 			&::placeholder{
             @include text-font;
             color: $ds75;
 			}
+			
+		
         }
 }
 label{
@@ -74,21 +77,3 @@ label{
 	@include h3-font;
 	text-transform: uppercase;
 }
-/*.info-email{
-font-weight: 600;
-color: #363838;
-font-size: 14px;
-margin-bottom: 22px;
-padding-left: 30px;
-display: inline-block;
-position: relative;
-&::before{
-	content: '';
-	background-image: url(../images/envelope.svg);
-	position: absolute;
-	left: 0;
-	width: 16px;
-	height: 12px;
-	top: 5px;
-}
-}*/

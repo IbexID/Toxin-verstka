@@ -9,6 +9,25 @@ import './styles/style.scss'
 import '../src/js/item-quantity-dropdown.min'
 import './pug/index.pug'
 
+
+//masked text input
+
+$("#masked-text-field").inputmask({
+    alias: "datetime",
+    placeholder: "ДД.ММ.ГГГГ",
+    showMaskOnFocus: false,
+    inputFormat: "dd.mm.yyyy",
+    min: "01.01.1930",
+    max: "31.12.2021"
+});
+$("#datedropdown").inputmask({
+    alias: "datetime",
+    placeholder: "ДД.ММ.ГГГГ",
+    showMaskOnFocus: true,
+    inputFormat: "dd.mm.yyyy",
+    min: "01.01.1930",
+    max: "31.12.2021"
+});
 // apply button for air-datepicker
 let apply = {
     content: 'Применить',
@@ -54,24 +73,18 @@ datedropdown = new AirDatepicker('#datedropdown', {
         date
     }) {
         datedropdown.update({
-            minDate: date
+            minDate: new Date(),
         })
     },
+    buttons: ['clear', apply],
     minDate: new Date(),
-    autoClose: false,
-    range: true,
-    buttons: ['clear', apply]
+    autoClose: true,
+    range: false,
 
 })
 
-$("#masked-text-field").inputmask({
-    alias: "datetime",
-    placeholder: "ДД.ММ.ГГГГ",
-    showMaskOnFocus: false,
-    inputFormat: "dd.mm.yyyy",
-    min: "01.01.1930",
-    max: "31.12.2021"
-});
+
+
 
 //range-slider
 $("#slider").slider({
@@ -97,7 +110,6 @@ function declOfNum(itemCount, totalItems) {
 
 
 $(".iqdropdown").iqDropdown({
-
     setSelectionText: function (itemCount, totalItems) {
         let text1 = this.selectionText;
         text1 = declOfNum(itemCount.item1, ['спальня', 'спальни', 'спален']);
