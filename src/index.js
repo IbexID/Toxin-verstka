@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $, { nodeName } from 'jquery'
 import '../src/styles/jquery-ui.css'
 import AirDatepicker from 'air-datepicker'
 import 'air-datepicker/air-datepicker.css'
@@ -76,10 +76,32 @@ datedropdown = new AirDatepicker('#datedropdown', {
             minDate: new Date(),
         })
     },
+    navTitles: {
+        days: 'MMMM <i>yyyy</i>',
+    },
     buttons: ['clear', apply],
     minDate: new Date(),
     autoClose: true,
     range: false,
+
+})
+datedropdown = new AirDatepicker('#filterdate', {
+    onSelect({
+        date
+    }) {
+        datedropdown.update({
+            minDate: new Date(),
+        })
+    },
+    dateFormat: 'dd MMM',
+    multipleDatesSeparator: " - ",
+    navTitles: {
+        days: 'MMMM <i>yyyy</i>',
+    },
+    buttons: ['clear', apply],
+    minDate: new Date(),
+    autoClose: true,
+    range: true,
 
 })
 
