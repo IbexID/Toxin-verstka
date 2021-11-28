@@ -4,7 +4,8 @@
     height: max-content;
     padding-left: 110px;
     padding-top: 110px;
-
+    display: grid;
+    grid-template-columns: repeat(1, 2fr 1fr);
     &__title {
         margin-top: 10px;
         @include h3-font;
@@ -30,13 +31,16 @@
     &__input {
         width: 320px;
     }
-    &__input--hover{
+
+    &__input--hover {
         width: 320px;
         border: 1px solid $ds50 !important;
-        &::placeholder{
-        color: $ds75 !important;
+
+        &::placeholder {
+            color: $ds75 !important;
         }
     }
+
     &__descr {
         z-index: 1;
         @include h3-font;
@@ -228,6 +232,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
     &__label {
         margin-left: 50px;
         padding-bottom: 10px;
@@ -412,6 +417,7 @@
     height: 6px;
     border: 1px solid $ds25;
     position: relative;
+
     &-range {
         position: absolute;
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -689,6 +695,7 @@
         top: 0;
         right: 0;
     }
+
     &__title-input {
         width: 1px;
         height: 1px;
@@ -745,7 +752,8 @@
         border-radius: 4px;
         left: 0;
     }
-    &__style:last-child{
+
+    &__style:last-child {
         bottom: 1px;
     }
 }
@@ -808,6 +816,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+
     &__list {
         margin-top: 17px;
         display: block;
@@ -818,7 +827,8 @@
         margin-bottom: 62px;
         position: relative;
     }
-    &__item:first-child .richcheckbox__label .richcheckbox__text{
+
+    &__item:first-child .richcheckbox__label .richcheckbox__text {
         width: 200px;
     }
 
@@ -847,6 +857,7 @@
         margin-top: 2px;
         margin-bottom: 6px;
     }
+
     &__text {
         width: 234px;
         font-family: Montserrat;
@@ -1017,9 +1028,11 @@
     &-nav--action svg {
         opacity: 0;
     }
+
     &-nav--action:first-child {
         margin-right: 20px;
         padding-right: 20px;
+
         &::before {
             font-family: 'material icons', sans-serif;
             font-size: 24px;
@@ -1166,6 +1179,7 @@
 .filterdate {
     position: relative;
     width: 266px;
+
     &__label {
         display: flex;
         flex-direction: column;
@@ -1175,7 +1189,20 @@
         @include text-font;
         text-transform: lowercase;
     }
+
     .date-dropdown__icon {
         left: 165px;
+    }
+}
+
+.iqdropdown-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 7px 10px 14px;
+    &__apply,
+    &__clear {
+        @include h3-font;
+        color: $pur;
+        text-transform: uppercase;
     }
 }
