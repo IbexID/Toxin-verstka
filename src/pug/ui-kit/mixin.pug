@@ -1,0 +1,18 @@
+mixin twitter
+    a.footer__copyright-link(href='#')
+        img(alt='twitter', src=require("../images/svg/twitter.png"))
+mixin facebook
+    a.footer__copyright-link(href='#')
+        img(alt='facebook', src=require("../images/svg/facebook.png"))
+mixin instagram
+    a.footer__copyright-link(href='#')
+        img(alt='instagram', src=require("../images/svg/instagram.png"))
+mixin logo 
+    img(src=require("../images/svg/logo.svg"))
+mixin symbol(name, classname)
+    span.material-icons(class=classname) #{name}
+mixin button-tr(name)
+    .button__gradient
+        button.button.button--tr #{name}
+mixin button(name)
+    button.button #{name}

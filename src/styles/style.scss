@@ -171,6 +171,7 @@ h1 {
         color: $ds50;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 770px;
         height: 70px;
         margin-right: 141px;
@@ -199,19 +200,22 @@ h1 {
     }
 
     &__navbar-item {
+        display: flex;
+        align-items: center;
         @include text-font;
         color: $ds50;
         line-height: 17px;
-        padding-right: 20px;
+        padding-right: 21px;
     }
+    &__navbar-item:nth-of-type(4) {
+        padding-right: 20px;
+        }
 
     &__navbar-icon {
         line-height: 20px;
-        width: 24px;
-        height: 21px;
-        padding-left: 0;
-        margin-left: -18px;
-        padding-right: 44px;
+        width: 21px;
+        height: 24px;
+        margin: 5px 2px 0 0px;
         position: relative;
 
         &:hover .header__droplist {
@@ -250,22 +254,22 @@ h1 {
 
     &__buttons {
         display: flex;
-        width: 305px;
+        width: 303px;
     }
 
     &__buttons-list {
         display: flex;
         align-items: center;
+        margin-bottom: 2px;
     }
 
     &__buttons-item {
         text-transform: uppercase;
-        padding: 10px 20px;
+        padding: 10px 20px 10px 0;
         position: relative;
         @include h3-font;
         text-align: center;
         border-radius: 22px;
-        margin-right: 19px;
     }
 
     &__buttons-gradient {
