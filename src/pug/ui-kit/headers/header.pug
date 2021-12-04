@@ -8,28 +8,14 @@
                 a(href="#") О нас
             li.header__navbar-item 
                 a(href="#") Услуги
-                +symbol('expand_more', 'header__navbar-icon')
-                    ul.header__droplist.header__droplist--service
-                        li.header__droplist-item 
-                            a(href="#") 12313123
-                        li.header__droplist-item 
-                            a(href="#") 12313123
-                        li.header__droplist-item 
-                            a(href="#") 12313123
+                +droplist('expand_more', 'header__navbar-icon')
             li.header__navbar-item 
                 a(href="#") Вакансии
             li.header__navbar-item 
                 a(href="#") Новости
             li.header__navbar-item 
                 a(href="#") Соглашения
-                +symbol('expand_more', 'header__navbar-icon') 
-                    ul.header__droplist
-                        li.header__droplist-item 
-                            a(href="#") 12313123
-                        li.header__droplist-item 
-                            a(href="#") 12313123
-                        li.header__droplist-item 
-                            a(href="#") 12313123
+                +droplist('expand_more', 'header__navbar-icon') 
         .header__buttons
             ul.header__buttons-list
                 li.header__buttons-item

@@ -1,16 +1,25 @@
 mixin twitter
     a.footer__copyright-link(href='#')
-        img(alt='twitter', src=require("../images/svg/twitter.png"))
+        img.footer__copyright-img(alt='twitter', src=require("../images/svg/twitter.png"))
 mixin facebook
     a.footer__copyright-link(href='#')
-        img(alt='facebook', src=require("../images/svg/facebook.png"))
+        img.footer__copyright-img(alt='facebook', src=require("../images/svg/facebook.png"))
 mixin instagram
     a.footer__copyright-link(href='#')
-        img(alt='instagram', src=require("../images/svg/instagram.png"))
-mixin logo 
+        img.footer__copyright-img(alt='instagram', src=require("../images/svg/instagram.png"))
+mixin logo(classname)
     img(src=require("../images/svg/logo.svg"))
 mixin symbol(name, classname)
     span.material-icons(class=classname) #{name}
+mixin droplist(name, classname)
+    span.material-icons(class=classname) #{name}
+        ul.header__droplist.header__droplist--service
+            li.header__droplist-item 
+                a(href="#") 12313123
+            li.header__droplist-item 
+                a(href="#") 12313123
+            li.header__droplist-item 
+                a(href="#") 12313123
 mixin button-tr(name)
     .button__gradient
         button.button.button--tr #{name}
