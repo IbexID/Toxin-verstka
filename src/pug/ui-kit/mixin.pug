@@ -25,3 +25,32 @@ mixin button-tr(name)
         button.button.button--tr #{name}
 mixin button(name)
     button.button #{name}
+mixin calendar(id)
+    .date-dropdown 
+        label.date-dropdown__label
+        span.material-icons.date-dropdown__icon expand_more
+        input.datepicker-here.date-dropdown__input(placeholder='ДД.ММ.ГГГГ' type="text" id=id)
+mixin heading(title)
+    h3.form__title #{title}
+mixin guest-dropdown 
+    .iqdropdown-guest(id='iqdropdown2')
+        p.iqdropdown-selection ...
+    .iqdropdown-menu 
+        .iqdropdown-menu-option(data-id="guest1"  data-defaultcount="0" data-mincount="0" data-maxcount="4")
+            div 
+                p.iqdropdown-item взрослые
+        .iqdropdown-menu-option(data-id="guest2" data-defaultcount="0" data-mincount="0" data-maxcount="6")
+            div 
+                p.iqdropdown-item дети
+        .iqdropdown-menu-option(data-id="guest3" data-defaultcount="0" data-mincount="0" data-maxcount="2")
+            div 
+                p.iqdropdown-item младенцы
+        .iqdropdown-buttons
+            .iqdropdown-buttons__button
+                button.iqdropdown-buttons__clear очистить
+            .iqdropdown-buttons__button
+                button.iqdropdown-buttons__apply применить
+mixin arrow-button(title)
+    .pay
+        button.pay__button #{title}
+            span.material-icons.pay__arrow arrow_forward

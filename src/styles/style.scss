@@ -460,141 +460,28 @@ h1 {
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 0 30px;
     margin-bottom: 40px;
-
+    &__container{
+        padding: 0 30px;
+    }
     &__text {
-        padding: 40px 30px 22px 0;
+        padding: 40px 0 12px;
         @include h1-font;
         color: $ds100;
     }
 
     &__date {
         display: flex;
-        padding-bottom: 21px;
+        height: 64px;
+        margin-bottom: 31px;
     }
-
-    &__guests {
-        display: flex;
-        flex-direction: column;
-        @include h3-font;
-        text-transform: uppercase;
-        color: $ds100;
-        padding-bottom: 31px;
-        position: relative;
-    }
-
-    &__guests-icon {
-        position: absolute;
-        z-index: 1;
-        color: $ds50;
-        top: 30px;
-        left: 290px;
-    }
-
-    &__guests-input {
-        @include text-font;
-        margin-top: 5px;
-        width: 320px;
-        height: 44px;
-        border: 1px solid $ds25;
-        box-sizing: border-box;
-        border-radius: 4px;
-
-        &::placeholder {
-            padding: 13px 193px 13px 15px;
-        }
-    }
-
-    &__guests-dropdown {
-        display: none;
-    }
-
-    &__guests-list {}
-
-    &__guests-item {}
-
-    &__calendar {
-        margin-right: 20px;
-        @include h3-font;
-        text-transform: uppercase;
-        color: $ds100;
-
-    }
-
-    &__calendar-icon {
-        position: absolute;
-        z-index: 1;
-        color: $ds50;
-        top: 151px;
-    }
-
-    &__calendar-icon--arrival {
-        left: 150px;
-    }
-
-    &__calendar-icon--departure {
-        left: 320px;
-    }
-
-    &__calendar-input {
-        background: transparent;
-        z-index: 2;
-        @include text-font;
-        margin-top: 5px;
-        width: 150px;
-        height: 44px;
-        border: 1px solid $ds25;
-        box-sizing: border-box;
-        border-radius: 4px;
-        text-transform: uppercase;
-        position: relative;
-    }
-    /*
-.air-datepicker-body--day-names {
-}
-.air-datepicker-nav--title{
-}
-.air-datepicker {
-
---adp-color: #1F2041;
---adp-color-secondary: #BC9CFF;
-}
-    */
-    &__button {
+    &__button-wrapper{
         display: flex;
         justify-content: center;
-        width: 320px;
-        height: 44px;
-        align-items: center;
-        background: linear-gradient(to bottom, #BC9CFF 0%, #8BA4F9 100%);
-        border: none;
-        border-radius: 22px;
+        margin-right: 0px;
     }
-
-    &__button-text {
-        @include h3-font;
-        color: #fff;
-        text-transform: uppercase;
-        margin-left: -4px;
-        position: relative;
-
-        &::before {
-            color: transparent;
-            background: none;
-            display: block;
-            font-family: 'Material Icons';
-            font-weight: normal;
-            content: '\e5c8';
-            font-size: 24px;
-            line-height: 24px;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            top: -5px;
-            right: -98px;
-            color: #fff;
-        }
+    &__button--wide{
+        width: 320px;
     }
 }
 .air-datepicker-cell + .-current-{

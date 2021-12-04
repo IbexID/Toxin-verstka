@@ -1,27 +1,16 @@
 .room-finder
-    .room-finder__text
-        p Найдём номера под ваши пожелания
-    .room-finder__date
-        .room-finder__calendar
-          label.room-finder__calendar-label(for="arrival") Прибытие
-          span.material-icons.room-finder__calendar-icon.room-finder__calendar-icon--arrival expand_more
-          input.datepicker-here.room-finder__calendar-input(data-action='clear' placeholder='ДД.ММ.ГГГГ' type='text' id='arrival' max="2022-11-02")
-        .room-finder__calendar
-            label.room-finder__calendar-label(for="departure") Выезд
-            span.material-icons.room-finder__calendar-icon.room-finder__calendar-icon--departure expand_more
-            input.room-finder__calendar-input(placeholder='ДД.ММ.ГГГГ' type='text' id='departure' max="2022-11-02")
-    .room-finder__guests
-      label.room-finder__guests-label(for='finder-guests') Гости
-          span.material-icons.room-finder__guests-icon expand_more
-      input.room-finder__guests-input(placeholder='Сколько гостей' type='number' id='finder-guests' min='1' max='6')
-      .room-finder__guests-dropdown
-        ul.room-finder__guests-list
-          li.room-finder__guests-item 1
-          li.room-finder__guests-item 2
-          li.room-finder__guests-item 3
-          li.room-finder__guests-item 4
-          li.room-finder__guests-item 5
-          li.room-finder__guests-item 6
-    .room-finder__button-wrapper
-        button.room-finder__button
-            p.room-finder__button-text Подобрать номер
+    .room-finder__container
+        .room-finder__text
+            p Найдём номера под ваши пожелания
+        .room-finder__date
+            .room-finder__calendar
+                +heading('Прибытие')
+                +calendar('arrival')
+            .room-finder__calendar
+                +heading('выезд')
+                +calendar('departure')
+        .room-finder__guests
+            +heading('гости')
+            include ../form/guest-dropdown
+        .room-finder__button-wrapper
+            +arrow-button('Подобрать номер') 
