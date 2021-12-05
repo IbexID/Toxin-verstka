@@ -11,6 +11,8 @@ mixin logo(classname)
     img(src=require("../images/svg/logo.svg"))
 mixin symbol(name, classname)
     span.material-icons(class=classname) #{name}
+mixin symbol-out(name, classname)
+    span.material-icons-outlined(class=classname) #{name}
 mixin droplist(name, classname)
     span.material-icons(class=classname) #{name}
         ul.header__droplist.header__droplist--service

@@ -537,6 +537,7 @@
 }
 
 .pay {
+    margin-right: 3px;
     &__button {
         @include h3-font;
         text-transform: uppercase;
@@ -557,7 +558,7 @@
     &__arrow {
         position: absolute;
         content: '';
-        right: 10px;
+        right: 9px;
         top: 11px;
     }
 }
