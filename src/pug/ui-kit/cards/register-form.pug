@@ -1,27 +1,23 @@
 .register-form
-    p.register-form__heading Регистрация аккаунта
+    +h1heading('Регистрация аккаунта')
     .register-form__cred
-        input.register-form__cred-input(placeholder='Имя' type='text')
-        input.register-form__cred-input(placeholder='Фамилия' type='text')
+        +text-field('Имя', 'name', 'text-field__fit')
+        +text-field('Фамилия', 'surname', 'text-field__fit')
     .register-form__sex
-        input.register-form__sex-input(type='radio' name='sex' value='male' id='male')
-        label.register-form__sex-label(for='male') Мужчина
-        input.register-form__sex-input(type='radio' name='sex' value='female' id='female')
-        label.register-form__sex-label(for='female') Женщина
+        +radio('male', 'sex', 'Мужчина')
+        +radio('female', 'sex', 'Женщина')
     .register-form__birthday
-        label.register-form__birthday-label(for='birthday-date') Дата рождения
-        input.register-form__birthday-input(type='date' placeholder='Д.ММ.ГГГГ')
+        +heading('дата рождения')
+        +calendarwide('datedropdown', 'date-dropdown__input--wide', 'date-dropdown__icon--inv')
     .register-form__account
-        label.register-form__account-label(for='account') Данные для входа в сервис
-        input.register-form__account-input(type='email' placeholder='Email' id='account')
-        input.register-form__account-input(type='password' placeholder='Пароль' id='account')
+        +heading('Данные для входа в сервис', 'form__title--acc')
+        +email-field
+        +pass-field
     .register-form__subscription
-        input.register-form__subscription-input(type='checkbox' id='subscribe')
-        label.register-form__subscription-label(for='subscribe') Получать спецпредложения
+        +toggle('Получать спецпредложения')
     .register-form__buttons
-        button.register-form__button(type='submit')
-            p.register-form__button-text Перейти к оплате
-            span.material-icons.register-form__button-arrow arrow_forward
+        +arrow-button('перейти к оплате', 'pay--margin')
     .register-form__login
-        p.register-form__login-text Уже есть аккаунт на Toxin
-        a.register-form__login-link Войти
+        a.register-form__login-text Уже есть аккаунт на Toxin
+        .register-form__login-link
+            +button-tr('войти')

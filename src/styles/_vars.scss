@@ -7,12 +7,11 @@ $pur: #bc9cff;
 $gre: #6fcf97;
 
 @mixin field{
-    margin: 20px 0;
+    margin-bottom: 10px;
     width: 320px;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 3px;
 }
 
 @mixin pseudo{    

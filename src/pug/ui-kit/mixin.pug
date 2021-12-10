@@ -32,8 +32,15 @@ mixin calendar(id)
         label.date-dropdown__label
         span.material-icons.date-dropdown__icon expand_more
         input.datepicker-here.date-dropdown__input(placeholder='ДД.ММ.ГГГГ' type="text" id=id)
-mixin heading(title)
-    h3.form__title #{title}
+mixin calendarwide(id, classname1, classname2)
+    .date-dropdown 
+        label.date-dropdown__label
+        span.material-icons.date-dropdown__icon(class=classname2) expand_more
+        input.datepicker-here.date-dropdown__input(placeholder='ДД.ММ.ГГГГ' type="text" id=id, class=classname1)
+mixin heading(title, classname)
+    h3.form__title(class=classname) #{title}
+mixin h1heading(title)
+    h1.form__h1title #{title}
 mixin guest-dropdown 
     .iqdropdown-guest(id='iqdropdown2')
         p.iqdropdown-selection ...
@@ -52,7 +59,31 @@ mixin guest-dropdown
                 button.iqdropdown-buttons__clear очистить
             .iqdropdown-buttons__button
                 button.iqdropdown-buttons__apply применить
-mixin arrow-button(title)
-    .pay
+mixin arrow-button(title, classname)
+    .pay(class=classname)
         button.pay__button #{title}
             span.material-icons.pay__arrow arrow_forward
+mixin text-field(placeholder, name, classname)
+    .text-field(class=classname)
+        label.text-field__label
+            input.text-field__input(type="text", name="text-field" placeholder=placeholder)
+mixin email-field(classname)
+    .text-field(class=classname)
+        label.text-field__label
+            input.text-field__input(type="text", name="email" placeholder='Email')
+mixin pass-field(classname)
+    .text-field(class=classname)
+        label.text-field__label
+            input.text-field__input(type="text", name="password" placeholder='Пароль')
+mixin radio(value, name, title)
+    .radio-buttons__wrapper
+        label.radio-buttons__label
+            input.radio-buttons__input(type='radio' name=name value=value)
+            span.radio-buttons__style 
+            | #{title}
+mixin toggle(text)
+    .toggle 
+        label.toggle__label
+            input.toggle__input(type='checkbox')
+            span.toggle__slider
+            | #{text}

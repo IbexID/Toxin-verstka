@@ -1,0 +1,11 @@
+.login-form
+    +h1heading('Войти')
+    .login-form__cred 
+        +email-field
+        +pass-field
+    .login-form__button 
+        +arrow-button('войти')
+    .login-form__login
+        a.login-form__login-text Нет аккаунта на Toxin?
+        .login-form__login-link
+            +button-tr('создать')

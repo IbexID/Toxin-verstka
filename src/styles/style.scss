@@ -499,7 +499,7 @@ h1 {
         justify-content: center;
         margin-right: 0px;
         width: 320px;
-        
+
     }
 
     &__button--wide {
@@ -614,7 +614,7 @@ h1 {
         margin-right: 22px;
     }
 
-     .book-form__summary-span {
+    .book-form__summary-span {
         text-align: center;
         @include text-font;
         line-height: 20px;
@@ -667,11 +667,11 @@ h1 {
 
 .register-form {
     width: 380px;
-    height: 646px;
+    height: 645px;
     display: flex;
     flex-direction: column;
     background: #fff;
-    padding: 40px 30px 44px;
+    padding: 39px 30px 45px;
 
     &__heading {
         @include h1-font;
@@ -680,11 +680,14 @@ h1 {
     }
 
     &__sex {
+        padding-top: 5px;
         display: flex;
         flex-direction: row;
-        margin: 10px 0;
+        margin: 3px 0 7px;
         @include text-font;
     }
+
+    &__birthday {}
 
     &__birthday-label,
     &__account-label {
@@ -707,11 +710,14 @@ h1 {
         color: #fff;
     }
 
-    &__login-link {
-        @include h3-font;
-        text-transform: uppercase;
-        color: $pur;
+    &__login {
+        padding-top: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between
     }
+
+    &__login-link {}
 
     &__login-text {
         @include text-font;
@@ -739,6 +745,33 @@ h1 {
     line-height: 18px;
     color: $ds25;
     padding: 13px 273px 13px 15px;
+}
+
+.login-form {
+    width: 380px;
+    height: 358px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 39px 30px 45px;
+
+    &__button {
+        margin-top: 19px;
+        margin-bottom: 28px;
+    }
+
+    &__login {
+        @include text-font;
+        line-height: 18px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+    &__login-text{
+        width: 164px;
+        margin-top: 4px;
+    }
 }
 
 @import 'forms.scss';
