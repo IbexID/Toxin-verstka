@@ -1,0 +1,16 @@
+.room 
+    .room__img
+        img(src=require("../images/room.jpg"))
+        img(src=require("../images/roomluxe.jpg"))
+        img(src=require("../images/room.jpg"))
+        img(src=require("../images/roomluxe.jpg"))
+    .room__info-wrapper
+        .room__info 
+            .room__number
+                +roomnum('840')
+            .room__price 
+                +graytext('9 900₽', 'в сутки')
+        .room__rating
+            +rate('star-1','star-2','star-3','star-4','star-5', 'rating')
+            .room__rating-text
+                +graytext('65', 'Отзывов', 'book-form__room-text--price book-form__room-text--normalprice')

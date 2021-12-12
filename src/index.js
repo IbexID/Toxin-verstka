@@ -1,11 +1,14 @@
-import $, { nodeName } from 'jquery'
+import $ from 'jquery'
 import '../src/styles/jquery-ui.css'
 import AirDatepicker from 'air-datepicker'
+import slick from 'slick-carousel'
 import 'air-datepicker/air-datepicker.css'
 import './js/jquery-ui.min'
 import './js/jquery.inputmask.min'
 import '../src/styles/item-quantity-dropdown.min.css'
 import './styles/style.scss'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import '../src/js/item-quantity-dropdown.min'
 import './pug/index.pug'
 
@@ -64,6 +67,43 @@ departure = new AirDatepicker('#departure', {
             maxDate: date
         })
     },
+    autoClose: false,
+    buttons: ['clear', apply],
+
+})
+departure = new AirDatepicker('#arrival2', {
+    onSelect({
+        date
+    }) {
+        arrival.update({
+            maxDate: date
+        })
+    },
+    autoClose: false,
+    buttons: ['clear', apply],
+
+})
+departure = new AirDatepicker('#departure2', {
+    onSelect({
+        date
+    }) {
+        arrival.update({
+            maxDate: date
+        })
+    },
+    autoClose: false,
+    buttons: ['clear', apply],
+
+})
+departure = new AirDatepicker('#august', {
+    onSelect({
+        date
+    }) {
+        arrival.update({
+            maxDate: date
+        })
+    },
+    inline: true,
     autoClose: false,
     buttons: ['clear', apply],
 
@@ -148,10 +188,21 @@ $(".iqdropdown").iqDropdown({
      return totalItems[ (itemCount%100>4 && itemCount%100<20)? 2 : cases[(itemCount%10<5)?itemCount%10:5] ];  
  } */
 
- $(".iqdropdown-guest").iqDropdown({ 
-     setSelectionText: function(itemCount, totalItems) {
-         let text = this.selectionText;
-         text = declOfNum(totalItems, ['гость', 'гостя', 'гостей']);
-         return `${totalItems} ${text}`;
-     },
-  });
+$(".iqdropdown-guest").iqDropdown({
+    setSelectionText: function (itemCount, totalItems) {
+        let text = this.selectionText;
+        text = declOfNum(totalItems, ['гость', 'гостя', 'гостей']);
+        return `${totalItems} ${text}`;
+    },
+});
+
+//slick carousel slider
+$('.room__img').slick({
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    dots: true,
+    speed: 500,
+    arrows: true,
+
+});

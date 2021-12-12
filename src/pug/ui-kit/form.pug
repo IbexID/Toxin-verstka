@@ -1,0 +1,76 @@
+doctype html
+html
+    head
+    include mixin
+    body.form 
+        .form__block
+            h3.form__title bullet list
+            include form/bullet-list
+        .form__block
+            h3.form__title Buttons
+            include/form/buttons
+        .form__block
+            h3.form__title checkbox buttons
+            include form/checkbox-buttons
+        .form__block
+            .datedropdown-container
+                h3.form__title Date dropdown
+                    include form/date-dropdown
+                h3.form__title Date dropdown
+                    include form/date-dropdown
+        .form__block
+            h3.form__title Dropdown
+            include form/dropdown
+            include form/expandable-checkbox-list
+        .form__block
+            h3.form__title Dropdown
+            include form/guest-dropdown
+        .form__block
+            h3.form__title filter date dropdown
+            include form/filter-date-dropdown
+        .form__block
+            h3.form__title Like button 
+            .like-container
+                include form/like
+                include form/like-2
+        .form__block
+            h3.form__title masked text field
+            include form/masked-text-field
+        .form__block
+            h3.form__title pagination
+            include form/pagination
+        .form__block
+            h3.form__title pay button
+            include form/pay-button
+        .form__block
+            h3.form__title Radio buttons
+            include form/radio-buttons
+        .form__block
+            h3.form__title range slider
+            include form/range-slider
+        .form__block
+            h3.form__title rate button
+            include form/rate
+        .form__block
+            h3.form__title review
+            include form/review
+        .form__block
+            h3.form__title rich checkbox buttons
+            include form/rich-checkbox-buttons
+        .form__block
+            h3.form__title subscription text field
+                include form/subscription-text-field
+        .form__block
+            h3.form__title text field
+            .text-field-container
+                p.text-field__descr default
+                include form/text-field 
+            .text-field-container
+                p.text-field__descr hover / focus
+                include form/text-field-hover 
+        .form__block
+            h3.form__title toggle
+            include form/toggle
+        .form__block
+            h3.form__title ups
+            include form/ups

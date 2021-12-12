@@ -467,7 +467,11 @@ h1 {
         margin: 42px 140px 150px;
     }
 }
-
+.cards__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
 .room-finder {
     background: #fff;
     width: 380px;
@@ -544,6 +548,12 @@ h1 {
         line-height: 17px;
         font-weight: 700;
     }
+    &__room-text--big{
+        @include text-font;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
+    }
 
     &__room-text--class {
         @include h3-font;
@@ -555,25 +565,32 @@ h1 {
         padding-right: 2px;
         text-transform: uppercase;
     }
+    &__room-text--card{
+        margin-left: 1px;
+    }
 
     &__room-price {
         margin-left: 10px;
-
     }
-
-    &__room-text--price {
-        @include text-font;
-        line-height: 18px;
-        font-weight: 700;
+    &__room-price--nomargin{
+        margin-left: 0;
     }
 
     &__room-text--name {
         @include h3-font;
+        color: $ds50;
         font-size: 12px;
         font-weight: 400;
     }
-
-    &__guests {}
+    &__room-text--price {
+        @include text-font;
+        color: $ds50;
+        line-height: 18px;
+        font-weight: 700;
+    }
+    &__room-text--normalprice{
+        font-weight: 400;
+    }
 
     &__summary {
         display: flex;
@@ -672,6 +689,8 @@ h1 {
     flex-direction: column;
     background: #fff;
     padding: 39px 30px 45px;
+    margin-bottom: 20px;
+    @include shadow;
 
     &__heading {
         @include h1-font;
@@ -686,9 +705,6 @@ h1 {
         margin: 3px 0 7px;
         @include text-font;
     }
-
-    &__birthday {}
-
     &__birthday-label,
     &__account-label {
         @include h3-font;
@@ -716,9 +732,6 @@ h1 {
         align-items: center;
         justify-content: space-between
     }
-
-    &__login-link {}
-
     &__login-text {
         @include text-font;
         line-height: 18px;
@@ -754,6 +767,7 @@ h1 {
     flex-direction: column;
     background: #fff;
     padding: 39px 30px 45px;
+    @include shadow;
 
     &__button {
         margin-top: 19px;
@@ -774,4 +788,47 @@ h1 {
     }
 }
 
+.room, 
+.roomluxe{
+    height: 257px;
+    width: 270px;
+    background-color: #fff;
+    @include shadow;
+    border: none;
+    &__info-wrapper{
+        margin: 0px 16px 19px 20px;
+    }
+    &__img img{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: 151px;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 11px;
+    }
+    &__number{
+        display: flex;
+        align-items: baseline;
+        justify-content: start;
+    }
+    &__price{
+        margin-top: 1px;
+        margin-right: 1px;
+    }
+    &__class{
+    }
+    &__rating{
+        padding-top: 10px;
+        padding-right: 4px;
+        border-top: 1px solid rgba(31, 32, 65, 0.1);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__rating-text{
+        margin-top: 2px;
+    }
+}
 @import 'forms.scss';
