@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title Sign In page
+    body
+        include ui-kit/mixin
+        main.signin__main
+            .header__wrapper
+                include ui-kit/headers/header
+            .signin__wrapper
+                .signin__container 
+                    .signin__login-form 
+                        +signin
+            .footer__wrapper 
+                include ui-kit/headers/footer
+            

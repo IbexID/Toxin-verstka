@@ -138,3 +138,16 @@ mixin register(button)
             a.register-form__login-text Уже есть аккаунт на Toxin
             .register-form__login-link
                 +bigbutton-tr('войти')
+mixin signin 
+    .login-form
+        +h1heading('Войти')
+        .login-form__cred 
+            +email-field
+            +pass-field
+        .login-form__button 
+            +arrow-button('войти')
+        .login-form__login
+            a.login-form__login-text Нет аккаунта на Toxin?
+            .login-form__login-link
+                +bigbutton-tr('создать')
+    
