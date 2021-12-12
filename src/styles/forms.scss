@@ -521,15 +521,24 @@
     margin-top: 0px;
     border-radius: 24px;
 }
-
+.button__gradient--big{
+    position: relative;
+    min-width: 99px;
+    height: 44px;
+    background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
+    margin-top: 0px;
+    border-radius: 24px;
+}
 .button__gradient:hover,
 .button__force-gr {
     z-index: 1;
-    height: 38px;
+    height: 34px;
     background: linear-gradient(180deg, rgba(188, 156, 255, .5), rgba(139, 164, 249, .5));
     border-radius: 24px;
 }
-
+.button__gradient--big:hover{
+    height: 44px;
+}
 .button--tr {
     padding: 0px 10px;
     position: absolute;
@@ -545,12 +554,19 @@
     background: #fff;
     opacity: 1;
 }
-
+.button--big{
+    padding: 0px 10px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    height: 40px;
+    width:95px;
+}
 .pay {
     margin-right: 4px;
     margin-top: 1px;
     &--margin{
-        margin-top: 8px;
+        margin-top: 7px;
         margin-bottom: 26px;
     }
     &__button {

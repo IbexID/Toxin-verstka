@@ -25,6 +25,9 @@ mixin droplist(name, classname)
 mixin button-tr(name)
     .button__gradient
         button.button.button--tr #{name}
+mixin bigbutton-tr(name)
+    .button__gradient.button__gradient--big
+        button.button.button--tr.button--big #{name}
 mixin button(name)
     button.button #{name}
 mixin calendar(id)
@@ -111,3 +114,27 @@ mixin rate(id1, id2, id3, id4, id5, name)
             label.rate__label.material-icons(for=id4)
             input.rate__input(id=id5 value='1' type="radio" name=name)
             label.rate__label.material-icons(for=id5)
+mixin register(button)
+    .register-form
+        +h1heading('Регистрация аккаунта')
+        .register-form__cred
+            +text-field('Имя', 'name', 'text-field__fit')
+            +text-field('Фамилия', 'surname', 'text-field__fit')
+        .register-form__sex
+            +radio('male', 'sex', 'Мужчина')
+            +radio('female', 'sex', 'Женщина')
+        .register-form__birthday
+            +heading('дата рождения')
+            +calendarwide('datedropdown', 'date-dropdown__input--wide', 'date-dropdown__icon--inv')
+        .register-form__account
+            +heading('Данные для входа в сервис', 'form__title--acc')
+            +email-field
+            +pass-field
+        .register-form__subscription
+            +toggle('Получать спецпредложения')
+        .register-form__buttons
+            +arrow-button(button, 'pay--margin')
+        .register-form__login
+            a.register-form__login-text Уже есть аккаунт на Toxin
+            .register-form__login-link
+                +bigbutton-tr('войти')
