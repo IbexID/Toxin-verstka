@@ -775,6 +775,7 @@ h1 {
     }
 
     &__login {
+        padding-top: 2px;
         @include text-font;
         line-height: 18px;
         color: #000;
