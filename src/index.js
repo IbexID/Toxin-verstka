@@ -55,8 +55,8 @@ arrival = new AirDatepicker('#arrival', {
     },
     minDate: new Date(),
     autoClose: false,
-    buttons: ['clear', apply]
-
+    buttons: ['clear', apply],
+    range: true,
 })
 
 departure = new AirDatepicker('#departure', {
@@ -69,6 +69,7 @@ departure = new AirDatepicker('#departure', {
     },
     autoClose: false,
     buttons: ['clear', apply],
+    range: true,
 
 })
 departure = new AirDatepicker('#arrival2', {

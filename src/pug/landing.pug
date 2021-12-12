@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title Landing page
+    body
+        include ui-kit/mixin
+        .landing__wrapper 
+            .header__wrapper
+                include ui-kit/headers/header
+            main.main
+                .landing__container 
+                    .landing__room-finder
+                        include ui-kit/cards/room-finder
+                    p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+            .footer__wrapper 
+                include ui-kit/headers/footer
+            

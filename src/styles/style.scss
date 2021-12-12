@@ -160,7 +160,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
 
     &__logo {
         display: flex;
@@ -201,7 +200,7 @@ h1 {
         }
     }
 
-    &__navbar-item:nth-of-type(1) {
+    &__navbar-item--active {
         font-weight: 700;
         line-height: 17px;
         width: fit-content;
@@ -268,6 +267,12 @@ h1 {
         text-align: center;
         box-shadow: 2px 4px 4px 0px $ds50;
 
+        &:hover {
+            background: rgba(255, 255, 255, 0.616);
+            box-shadow: 2px 2px 2px 2px $ds5;
+            color: $ds75;
+        }
+
         &:last-child {
 
             border: solid 2px $ds5;
@@ -287,18 +292,18 @@ h1 {
 
     &__buttons-item {
         text-transform: uppercase;
-        padding: 10px 20px 10px 0;
+        padding: 11px 20px 10px 0;
         position: relative;
         @include h3-font;
         text-align: center;
-        border-radius: 22px;
+        border-radius: 24px;
     }
 
     &__buttons-gradient {
         position: relative;
         background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
         padding: 2px;
-        border-radius: 22px;
+        border-radius: 24px;
     }
 
     &__buttons-item--login {
@@ -325,6 +330,8 @@ h1 {
     }
 }
 
+
+
 .footer {
     background-color: #fff;
     min-width: 1440px;
@@ -337,6 +344,7 @@ h1 {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        margin-right: 3px;
     }
 
     &__block {
@@ -467,11 +475,13 @@ h1 {
         margin: 42px 140px 150px;
     }
 }
-.cards__wrapper{
+
+.cards__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
+
 .room-finder {
     background: #fff;
     width: 380px;
@@ -501,7 +511,8 @@ h1 {
     &__button-wrapper {
         display: flex;
         justify-content: center;
-        margin-right: 0px;
+        margin-left: 1px;
+        margin-top:30px;
         width: 320px;
 
     }
@@ -548,7 +559,8 @@ h1 {
         line-height: 17px;
         font-weight: 700;
     }
-    &__room-text--big{
+
+    &__room-text--big {
         @include text-font;
         font-weight: 700;
         font-size: 19px;
@@ -565,14 +577,16 @@ h1 {
         padding-right: 2px;
         text-transform: uppercase;
     }
-    &__room-text--card{
+
+    &__room-text--card {
         margin-left: 1px;
     }
 
     &__room-price {
         margin-left: 10px;
     }
-    &__room-price--nomargin{
+
+    &__room-price--nomargin {
         margin-left: 0;
     }
 
@@ -582,13 +596,15 @@ h1 {
         font-size: 12px;
         font-weight: 400;
     }
+
     &__room-text--price {
         @include text-font;
         color: $ds50;
         line-height: 18px;
         font-weight: 700;
     }
-    &__room-text--normalprice{
+
+    &__room-text--normalprice {
         font-weight: 400;
     }
 
@@ -705,6 +721,7 @@ h1 {
         margin: 3px 0 7px;
         @include text-font;
     }
+
     &__birthday-label,
     &__account-label {
         @include h3-font;
@@ -732,6 +749,7 @@ h1 {
         align-items: center;
         justify-content: space-between
     }
+
     &__login-text {
         @include text-font;
         line-height: 18px;
@@ -783,53 +801,88 @@ h1 {
         align-items: center;
         justify-content: space-between
     }
-    &__login-text{
+
+    &__login-text {
         width: 164px;
         margin-top: 4px;
     }
 }
 
-.room, 
-.roomluxe{
+.room,
+.roomluxe {
     height: 257px;
     width: 270px;
     background-color: #fff;
     @include shadow;
     border: none;
-    &__info-wrapper{
+
+    &__info-wrapper {
         margin: 0px 16px 19px 20px;
     }
-    &__img img{
+
+    &__img img {
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         height: 151px;
     }
-    &__info{
+
+    &__info {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 11px;
     }
-    &__number{
+
+    &__number {
         display: flex;
         align-items: baseline;
         justify-content: start;
     }
-    &__price{
+
+    &__price {
         margin-top: 1px;
         margin-right: 1px;
     }
-    &__class{
-    }
-    &__rating{
+
+    &__class {}
+
+    &__rating {
         padding-top: 10px;
         padding-right: 4px;
         border-top: 1px solid rgba(31, 32, 65, 0.1);
         display: flex;
         justify-content: space-between;
     }
-    &__rating-text{
+
+    &__rating-text {
         margin-top: 2px;
     }
 }
+.landing {
+    &__container {
+        position: relative;
+        background-size: cover;
+        height: 900px;
+        width: 100%;
+        background-image: url('../images/background.jpg');
+    }
+    &__room-finder{
+        position: absolute;
+        top: 139px;
+        left: 138px;
+    }
+    &__text{
+        position: absolute;
+        text-align: right;
+        bottom: 21px;
+        right: 135px;
+        display: block;
+        @include text-font;
+        width: 297px;
+        height: 48px;
+    }
+}
+
+
+
 @import 'forms.scss';
