@@ -921,18 +921,21 @@ h1 {
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: right 1px top 0px;
         width: 1440px;
         height: 773px;
 
     }
-
+    &__wrapper{
+        margin-right: 3px;
+        display: flex;
+        justify-content: center;
+    }
     &__container {
         height: 702px;
     }
-    &__login-form{
-        position: absolute;
-        top: 242px;
-        left: 528px;
+    &__login-form {
+        margin-top: 172px;
     }
 }
 
