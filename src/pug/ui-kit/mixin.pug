@@ -47,21 +47,21 @@ mixin h1heading(title)
 mixin guest-dropdown 
     .iqdropdown-guest(id='iqdropdown2')
         p.iqdropdown-selection ...
-    .iqdropdown-menu 
-        .iqdropdown-menu-option(data-id="guest1"  data-defaultcount="0" data-mincount="0" data-maxcount="4")
-            div 
-                p.iqdropdown-item взрослые
-        .iqdropdown-menu-option(data-id="guest2" data-defaultcount="0" data-mincount="0" data-maxcount="6")
-            div 
-                p.iqdropdown-item дети
-        .iqdropdown-menu-option(data-id="guest3" data-defaultcount="0" data-mincount="0" data-maxcount="2")
-            div 
-                p.iqdropdown-item младенцы
-        .iqdropdown-buttons
-            .iqdropdown-buttons__button
-                button.iqdropdown-buttons__clear очистить
-            .iqdropdown-buttons__button
-                button.iqdropdown-buttons__apply применить
+        .iqdropdown-menu 
+            .iqdropdown-menu-option(data-id="guest1"  data-defaultcount="0" data-mincount="0" data-maxcount="4")
+                div 
+                    p.iqdropdown-item взрослые
+            .iqdropdown-menu-option(data-id="guest2" data-defaultcount="0" data-mincount="0" data-maxcount="6")
+                div 
+                    p.iqdropdown-item дети
+            .iqdropdown-menu-option(data-id="guest3" data-defaultcount="0" data-mincount="0" data-maxcount="2")
+                div 
+                    p.iqdropdown-item младенцы
+            .iqdropdown-buttons
+                .iqdropdown-buttons__button
+                    button.iqdropdown-buttons__clear очистить
+                .iqdropdown-buttons__button
+                    button.iqdropdown-buttons__apply применить
 mixin arrow-button(title, classname)
     .pay(class=classname)
         button.pay__button #{title}
@@ -114,6 +114,71 @@ mixin rate(id1, id2, id3, id4, id5, name)
             label.rate__label.material-icons(for=id4)
             input.rate__input(id=id5 value='1' type="radio" name=name)
             label.rate__label.material-icons(for=id5)
+mixin rating1
+    .rate 
+        .rate__scale
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id1)
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id2)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id3)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id4)
+            input.rate__input(disabled checked type="radio")
+            label.rate__label.material-icons(for=id5)
+mixin rating2
+    .rate 
+        .rate__scale
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id1)
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id2)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id3)
+            input.rate__input(disabled  checked type="radio")
+            label.rate__label.material-icons(for=id4)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id5)
+mixin rating3
+    .rate 
+        .rate__scale
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id1)
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id2)
+            input.rate__input(disabled checked type="radio")
+            label.rate__label.material-icons(for=id3)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id4)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id5)
+mixin rating4
+    .rate 
+        .rate__scale
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id1)
+            input.rate__input(disabled checked type="radio")
+            label.rate__label.material-icons(for=id2)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id3)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id4)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id5)
+mixin rating5
+    .rate 
+        .rate__scale
+            input.rate__input(disabled checked type="radio")
+            label.rate__label.material-icons(for=id1)
+            input.rate__input(disabled  type="radio")
+            label.rate__label.material-icons(for=id2)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id3)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id4)
+            input.rate__input(disabled type="radio")
+            label.rate__label.material-icons(for=id5)
 mixin register(button)
     .register-form
         +h1heading('Регистрация аккаунта')
@@ -150,4 +215,108 @@ mixin signin
             a.login-form__login-text Нет аккаунта на Toxin?
             .login-form__login-link
                 +bigbutton-tr('создать')
-    
+mixin room1
+    img(src=require("../images/rooms/1.jpg"))
+mixin room2
+    img(src=require("../images/rooms/2.jpg"))
+mixin room3
+    img(src=require("../images/rooms/3.jpg"))
+mixin room4
+    img(src=require("../images/rooms/4.jpg"))
+mixin room5
+    img(src=require("../images/rooms/5.jpg"))
+mixin room6
+    img(src=require("../images/rooms/6.jpg"))
+mixin room7
+    img(src=require("../images/rooms/7.jpg"))
+mixin room8
+    img(src=require("../images/rooms/8.jpg"))
+mixin room9
+    img(src=require("../images/rooms/9.jpg"))
+mixin room10
+    img(src=require("../images/rooms/10.jpg"))
+mixin room11
+    img(src=require("../images/rooms/11.jpg"))
+mixin room12
+    img(src=require("../images/rooms/12.jpg"))
+mixin room(img1, img2, img3, img4, roomnum, graytextprice, rating, reviewnum)
+    .room 
+        .room__img
+            +#{img1}
+            +#{img2}
+            +#{img3}
+            +#{img4}
+        .room__info-wrapper
+            .room__info 
+                .room__number
+                    +roomnum(roomnum)
+                .room__price 
+                    +graytext(graytextprice, 'в сутки')
+            .room__rating
+                +#{rating}
+                .room__rating-text
+                    +graytext(reviewnum, 'Отзывов', 'book-form__room-text--price book-form__room-text--normalprice')
+mixin roomluxe(img1, img2, img3, img4, roomnum, graytextprice, rating, reviewnum)
+    .room 
+        .room__img
+            +#{img1}
+            +#{img2}
+            +#{img3}
+            +#{img4}
+        .room__info-wrapper
+            .room__info 
+                .room__number
+                    +roomnum(roomnum)
+                    +roomclass
+                .room__price 
+                    +graytext(graytextprice, 'в сутки')
+            .room__rating
+                +#{rating}
+                .room__rating-text
+                    +graytext(reviewnum, 'Отзывов', 'book-form__room-text--price book-form__room-text--normalprice')
+mixin filterdropdown(id)
+    .filterdate 
+        span.material-icons.date-dropdown__icon expand_more
+        input.filterdate__input.datepicker-here(type='text' id=id placeholder="Выберите даты")
+mixin rangeslider 
+    .range-slider
+        span.range-slider__result(id="result")
+        .range-slider__slide(id="slider") 
+mixin expcheckbox(name)
+    .expandable-list
+        label.expandable-list__title-label(for="expandable-checkbox-list") 
+            input.expandable-list__title-input(id="expandable-checkbox-list" type='checkbox')
+            p.expandable-list__title-text #{name}
+            span.material-icons.expandable-list__control.expandable-list__expand expand_more
+            span.material-icons.expandable-list__control.expandable-list__collapse expand_less
+            ul.expandable-list__list
+                li.expandable-list__item
+                    label.expandable-list__label
+                        input.expandable-list__input(type="checkbox" name="exp-checkbox")
+                        span.expandable-list__style
+                        | Завтрак
+                li.expandable-list__item
+                    label.expandable-list__label
+                        input.expandable-list__input(type="checkbox" checked name="exp-checkbox")
+                        span.expandable-list__style
+                        | Письменный стол
+                li.expandable-list__item
+                    label.expandable-list__label
+                        input.expandable-list__input(type="checkbox" checked name="exp-checkbox")
+                        span.expandable-list__style
+                        | Стул для кормления
+                li.expandable-list__item
+                    label.expandable-list__label
+                        input.expandable-list__input(type="checkbox" checked name="exp-checkbox")
+                        span.expandable-list__style
+                        | Кроватка
+                li.expandable-list__item
+                    label.expandable-list__label
+                        input.expandable-list__input(type="checkbox"  name="exp-checkbox")
+                        span.expandable-list__style
+                        | Телевизор
+                li.expandable-list__item
+                    label.expandable-list__label
+                        input.expandable-list__input(type="checkbox" name="exp-checkbox")
+                        span.expandable-list__style
+                        | Шампунь

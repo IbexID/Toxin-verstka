@@ -148,20 +148,22 @@ datedropdown = new AirDatepicker('#filterdate', {
 
 
 
-
 //range-slider
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
 $("#slider").slider({
     animate: "slow",
     range: true,
     min: 0,
-    max: 17000,
+    max: 15700,
     step: 100,
     values: [5000, 10000],
     slide: function (event, ui) {
-        $("#result").text(ui.values[0] + "₽" + " — " + ui.values[1] + "₽");
+        $("#result").text(ui.values[0] + "₽" + " - " + ui.values[1] + "₽");
     }
 });
-$("#result").text($("#slider").slider("values", 0) + "₽" + " — " + $("#slider").slider("values", 1) + "₽");
+$("#result").text(numberWithSpaces($("#slider").slider("values", 0)) + "₽" + " - " + numberWithSpaces($("#slider").slider("values", 1) + "₽"));
 
 
 

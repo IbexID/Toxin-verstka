@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        title Search room
+    body
+        include ui-kit/mixin
+        main.search__main
+            .header__wrapper
+                include ui-kit/headers/header
+            .search__wrapper
+                .search__filter-container 
+                    .search__filter
+                        .search__filter-item
+                            +heading('даты пребывания в отеле')
+                            +filterdropdown('filterdate')
+                        .search__filter-item
+                            +heading('гости')
+                            +guest-dropdown 
+                        .search__filter-item
+                            +heading('диапазон цены')
+                            +rangeslider 
+                            p.search__range-text Стоимость за сутки пребывания в номере
+                        .search__filter-item
+                            +heading('правила дома')
+                            include ui-kit/form/checkbox-buttons
+                        .search__filter-item
+                            +heading('доступность')
+                            include ui-kit/form/rich-checkbox-buttons
+                        .search__filter-item
+                            +heading('удобства номера')
+                            include ui-kit/form/dropdown
+                        .search__filter-item
+                            +expcheckbox('дополнительные удобства')
+                .search__rooms-container
+                    +h1heading('Номера, которые мы для вас подобрали')
+                    .search__rooms
+                        .search__rooms-item 
+                            +roomluxe('room1', 'room4', 'room5', 'room6', '888', '9 990₽', 'rating5', '19', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room2', 'room4', 'room5', 'room6', '840', '9 900₽', 'rating4', '65', 'Отзывов')
+                        .search__rooms-item 
+                            +roomluxe('room3', 'room4', 'room5', 'room6', '980', '8 500₽', 'rating3', '35', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room4', 'room4', 'room5', 'room6', '856', '7 300₽', 'rating5', '19', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room5', 'room4', 'room5', 'room6', '740', '6 000₽', 'rating4', '44', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room6', 'room4', 'room5', 'room6', '982', '5 800₽', 'rating3', '56', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room7', 'room4', 'room5', 'room6', '678', '5 500₽', 'rating5', '45', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room8', 'room4', 'room5', 'room6', '450', '5 300₽', 'rating4', '39', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room9', 'room4', 'room5', 'room6', '350', '5 000₽', 'rating3', '77', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room10', 'room4', 'room5', 'room6', '666', '5 000₽', 'rating5', '25', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room11', 'room4', 'room5', 'room6', '444', '5 000₽', 'rating3', '15', 'Отзывов')
+                        .search__rooms-item 
+                            +room('room12', 'room4', 'room5', 'room6', '352', '5 000₽', 'rating3', '55', 'Отзывов')
+                    .search__rooms-pagination 
+                        include ui-kit/form/pagination
+            .footer__wrapper 
+                include ui-kit/headers/footer
+            

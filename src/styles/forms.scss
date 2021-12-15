@@ -18,7 +18,8 @@
     &__h1title{
         @include h1-font;
         text-transform: initial;
-        margin-bottom: 21px;
+        margin-bottom: 23px;
+        margin-right: 1px;
     }
 }
 
@@ -95,20 +96,21 @@
 
 .checkbox-buttons {
     background-color: #fff;
-    width: 222px;
+    width: 230px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     position: relative;
 
     &__list {
-        margin-top: 17px;
+        margin-top: 12px;
         display: block;
+        margin-left: 0px;
     }
 
     &__item {
         display: flex;
-        margin-bottom: 30px;
+        margin-bottom: 31px;
     }
 
     &__input {
@@ -124,14 +126,15 @@
         line-height: 18px;
         text-transform: none;
         color: $ds50;
-        margin: 0 0 12px 0px;
-        padding-left: 24px;
+        margin: 0 6px 12px 0px;
+        padding-left: 30px;
         position: absolute;
+        width: 230px;
     }
 
     &__style {
         position: absolute;
-        top: -2px;
+        top: -1px;
         left: 0px;
         width: 20px;
         height: 20px;
@@ -437,12 +440,11 @@
 
 .ui-slider .ui-slider-handle {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    width: 12px;
-    height: 12px;
-    translate: transform(-50%, -50%);
+    width: 16px;
+    height: 16px;
     border-radius: 10px;
     border: 2px solid #FFFFFF;
-    margin-top: 0.5px;
+    margin-top: -1.5px;
 }
 
 .ui-state-hover,
@@ -455,12 +457,12 @@
 
 .range-slider {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
     width: 266px;
 
     &__result {
         position: absolute;
-        top: -32px;
+        top: -38px;
         right: 0;
         @include h3-font;
         color: $ds50;
@@ -595,7 +597,7 @@
 
 .pagination {
     margin-bottom: 60px;
-    width: 241px;
+    width: 242px;
     @include h3-font;
     color: $ds50;
     position: relative;
@@ -648,7 +650,7 @@
     }
 
     &__text {
-        margin-left: 6px;
+        margin-left: 8px;
         @include text-font;
         padding-top: 48px;
     }
@@ -730,7 +732,7 @@
     &__control {
         position: absolute;
         top: 0;
-        right: 0;
+        right: 10px;
     }
 
     &__title-input {
@@ -794,15 +796,15 @@
         bottom: 1px;
     }
 }
+.expandable-list__title-input~.expandable-list__collapse,
+.expandable-list__title-input:checked~.expandable-list__expand,
 
-.expandable-list__title-input:checked~.expandable-list__collapse,
-.expandable-list__title-input~.expandable-list__expand,
 .expandable-list__title-input~.expandable-list__list {
     display: none;
 }
 
-.expandable-list__title-input~.expandable-list__collapse,
-.expandable-list__title-input:checked~.expandable-list__expand,
+.expandable-list__title-input:checked~.expandable-list__collapse,
+.expandable-list__title-input~.expandable-list__expand,
 .expandable-list__title-input:checked~.expandable-list__list {
     display: block;
 }
@@ -852,10 +854,11 @@
     width: 266px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 2px;
+    margin-top: 0px;
 
     &__list {
-        margin-top: 17px;
+        margin-top: 15px;
         display: block;
     }
 
@@ -1028,7 +1031,7 @@
         position: absolute;
         z-index: 2;
         top: 11px;
-        left: 116px;
+        left: 117px;
     }
     &__icon--wide{
         left: 280px;
@@ -1037,7 +1040,14 @@
         opacity: 0;
     }
 }
-
+.search__filter{
+    .filterdate .date-dropdown__icon{
+        left: 232px;
+    }
+    .filterdate__input{
+        width: 266px;
+    }
+}
 .air-datepicker {
     width: 320px;
     height: 369px;
@@ -1266,6 +1276,8 @@
     &__input {
         @include text-font;
         text-transform: lowercase;
+        padding-bottom: 3px;
+        
     }
 
     .date-dropdown__icon {
