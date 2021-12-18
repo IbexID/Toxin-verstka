@@ -44,6 +44,8 @@ mixin heading(title, classname)
     h3.form__title(class=classname) #{title}
 mixin h1heading(title)
     h1.form__h1title #{title}
+mixin h2heading(title)
+    h2.form__h2title #{title}
 mixin guest-dropdown 
     .iqdropdown-guest(id='iqdropdown2')
         p.iqdropdown-selection ...
@@ -320,3 +322,30 @@ mixin expcheckbox(name)
                         input.expandable-list__input(type="checkbox" name="exp-checkbox")
                         span.expandable-list__style
                         | Шампунь
+mixin up(icon, title, text, classname)
+    .ups 
+        .ups__item
+            span.material-icons.ups__icon #{icon}
+            .ups__description
+                h3.ups__title #{title}
+                p.ups__text #{text}
+        .ups__separator(class=classname)
+mixin like(number, checked, clicked)
+    .like 
+        label.like__label
+            input.like__input(class=clicked type="checkbox" checked=checked )
+            span.material-icons.like__icon
+            span.like__num(value=number) #{number}
+mixin review(name, date, avatar, text, number, checked, clicked)
+    .review
+        .review__profile
+            .review__profile-avatar
+                img.review__profile-img(src=require("../images/reviews" + avatar))
+            .review__like 
+                +like(number, checked, clicked)
+        .review__info
+            p.review__info-name #{name}
+            p.review__info-date #{date}
+            p.review__info-text.
+                #{text}
+

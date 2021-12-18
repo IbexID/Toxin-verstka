@@ -1,0 +1,44 @@
+doctype html
+html
+    head
+        title Room details
+    body
+        include ui-kit/mixin
+        main.roomdet__main
+            .header__wrapper
+                include ui-kit/headers/header
+            .roomdet__wrapper
+                .roomdet__img-container 
+                    img.roomdet__img(src=require("../images/roomdetail/roomdet1.jpg"), alt="img")
+                    .roomdet__img-row
+                        img.roomdet__img(src=require("../images/roomdetail/roomdet2.jpg"), alt="img")
+                        img.roomdet__img(src=require("../images/roomdetail/roomdet3.jpg"), alt="img")
+                .roomdet__info-wrapper
+                    .roomdet__info-container
+                        .roomdet__info
+                            .roomdet__info-title
+                                +h2heading('Сведения о номере')
+                            +up('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+                            +up('location_city', 'Удобство', 'Окно в каждой из спален')
+                            +up('whatshot', 'Уют', 'Номер оснащён камином', 'ups__separator--hidden')
+                        .roomdet__vote
+                            +h2heading('Впечатления от номера')
+                            img(src=require('../images/pie.jpg'))
+                        .roomdet__review
+                            +h2heading('Отзывы посетителей номера')
+                            .roomdet__review-container
+                                p.roomdet__review-num 2 отзыва
+                                +review('Мурад Сарафанов', '5 дней назад', '/profile-pic3.png', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', 'true', 'clicked')
+                                +review('Патрисия Стеклышкова', 'Неделю назад', '/profile-pic4.png', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', '2')
+                        .roomdet__rules 
+                            +h2heading('Правила')
+                            .roomdet__rules-container
+                                include ui-kit/form/bullet-list
+                        .roomdet__cancel
+                            +h2heading('Отмена')
+                            p.roomdet__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                    .roomdet__book-form
+                        include ui-kit/cards/book-form
+            .footer__wrapper 
+                include ui-kit/headers/footer
+            

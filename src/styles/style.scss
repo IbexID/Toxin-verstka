@@ -349,7 +349,6 @@ h1 {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: 3px;
     }
 
     &__block {
@@ -954,7 +953,8 @@ h1 {
 
     &__main .footer__wrapper {
         margin-top: 1px;
-        .footer{
+
+        .footer {
             padding-top: 8px;
         }
     }
@@ -981,6 +981,7 @@ h1 {
 
         &:nth-of-type(6) {
             margin-bottom: 8px;
+
             .form__title {
                 margin-bottom: 4px;
             }
@@ -1013,10 +1014,101 @@ h1 {
     &__rooms-container {
         margin-top: 10px;
     }
-    &__rooms-pagination{
+
+    &__rooms-pagination {
         margin-left: 288px;
         margin-top: 41px;
         width: 241px;
+    }
+}
+
+.roomdet {
+    &__main{
+    background: #fff;
+    }
+    &__wrapper {
+        margin-bottom: 10px;
+    }
+
+    &__img-container {
+        margin-left: -1px;
+        display: flex;
+
+        &:first-child {
+            height: 485px;
+        }
+    }
+
+    &__img-row {
+        display: flex;
+        flex-direction: column;
+
+        .roomdet__img {
+            object-fit: cover;
+            min-height: 242px;
+            &:first-child{
+                object-position: 40% 50%;
+            }
+        }
+    }
+    &__info-wrapper{
+        display: flex;
+        margin: 70px 70px 62px 140px;
+    }
+    &__info-container {
+        margin-right: 66px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    &__info-title{
+        margin-bottom: 21px;
+    }
+    &__info{
+        margin-bottom: 14px;
+    }
+    &__review-container{
+        position: absolute;
+    }
+    &__review{
+        position: relative;
+        height: 306px;
+        width: 712px;
+        left: -2px;
+        margin-left: 1px;
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-bottom: 29px;
+    }
+    &__review-num{
+        @include text-font;
+        line-height: 14px;
+        position: absolute;
+        top: -37px;
+        right: 10px;
+    }
+    &__rules{
+        margin-right: 86px;
+        .form__h2title{
+            margin-left: 20px;
+            margin-bottom: 18px;
+        }
+    }
+    &__rules-container{
+        margin-top: 1px;
+        .bullet{
+        padding-bottom: 0;
+        }
+    }
+    &__cancel{
+        .form__h2title{
+            margin-bottom: 18px;
+        }
+    }
+    &__cancel-text {
+        @include text-font;
+        width: 340px;
     }
 }
 

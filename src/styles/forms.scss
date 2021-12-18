@@ -21,6 +21,10 @@
         margin-bottom: 23px;
         margin-right: 1px;
     }
+    &__h2title{
+        @include h2-font;
+        margin-bottom: 20px;
+    }
 }
 
 .text-field {
@@ -360,7 +364,8 @@
     }
 
     &__num {
-        margin-left: 21px;
+        text-align: left;
+        margin-left: 22px;
         padding-bottom: 2px;
     }
 }
@@ -658,7 +663,6 @@
 
 .ups {
     @include text-font;
-    padding-bottom: 40px;
 
     &__item {
         width: 291px;
@@ -690,7 +694,9 @@
         height: 1px;
         background-color: rgba(#1F2041, .1);
         margin-bottom: 20px;
-
+    }
+    &__separator--hidden{
+        display: none;
     }
 }
 
@@ -956,7 +962,7 @@
 
 .review {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 23px;
     position: relative;
 
     &__profile {
@@ -969,10 +975,9 @@
     }
 
     &__profile-img {
-        margin-top: 1px;
-        width: 48px;
-        height: 48px;
-        max-width: 48px;
+        object-fit:cover;
+        min-height: 100%;
+        width: auto;
         border-radius: 50%;
         border: 2px solid #fff;
     }
@@ -980,7 +985,7 @@
     &__like .like {
         position: absolute;
         left: 3px;
-        top: 64px;
+        top: 55px;
         font-size: 10px;
         line-height: 12px;
     }
@@ -1000,6 +1005,7 @@
     &__info-date {
         @include text-font;
         margin-bottom: 10px;
+        margin-left: 1px;
     }
 
     &__info-text {

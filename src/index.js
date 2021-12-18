@@ -12,7 +12,19 @@ import 'slick-carousel/slick/slick-theme.css'
 import '../src/js/item-quantity-dropdown.min'
 import './pug/index.pug'
 
-
+$(".like__input").click(function(){
+    if ($(this).hasClass('clicked')) {
+        $(this).removeClass('clicked');
+        $(this).find('span.like__num').html(parseInt($(this).find('span.like__num').html()) - 1);
+        $(this).find('.like__label').html('');
+    }
+    else {
+        $(this).addClass('clicked');
+        $(this).find('span.like__num').html(parseInt($(this).find('span.like__num').html()) + 1);
+        $(this).find('.like__label').html('');
+        
+    }
+});
 //masked text input
 
 $("#masked-text-field").inputmask({
