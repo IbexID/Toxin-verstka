@@ -23,7 +23,9 @@ html
                             +up('whatshot', 'Уют', 'Номер оснащён камином', 'ups__separator--hidden')
                         .roomdet__vote
                             +h2heading('Впечатления от номера')
-                            img(src=require('../images/pie.jpg'))
+                            .roomdet__chart 
+                                canvas(id='mychart' height='110' width='160' )
+                                .chartjslegend(id='chartjslegend')
                         .roomdet__review
                             +h2heading('Отзывы посетителей номера')
                             .roomdet__review-container

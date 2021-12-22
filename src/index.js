@@ -11,6 +11,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../src/js/item-quantity-dropdown.min'
 import './pug/index.pug'
+import Chart from 'chart.js/auto';
 
 $(".like__input").click(function(){
     if ($(this).hasClass('clicked')) {
@@ -220,4 +221,141 @@ $('.room__img').slick({
     speed: 500,
     arrows: true,
 
+});
+
+//chart js
+var ctx = document.getElementById("mychart").getContext("2d");
+var orange = ctx.createLinearGradient(0, 0, 0, 400);
+orange.addColorStop(0, 'rgba(255,227,156,1)');   
+orange.addColorStop(1, 'rgba(255,186,156,1)');
+var green = ctx.createLinearGradient(0, 0, 0, 400);
+green.addColorStop(0, 'rgba(111, 207, 151, 1)');   
+green.addColorStop(1, 'rgba(102, 210, 234, 1)');
+var purple = ctx.createLinearGradient(0, 0, 0, 400);
+purple.addColorStop(0, 'rgba(188, 156, 255, 1)');   
+purple.addColorStop(1, 'rgba(139, 164, 249, 1)');
+var black = ctx.createLinearGradient(0, 0, 0, 400);
+black.addColorStop(0, 'rgba(144, 144, 144, 1)');   
+black.addColorStop(1, 'rgba(61, 73, 117, 1)');
+
+
+
+const getOrCreateLegendList = (chart, id) => {
+    const legendContainer = document.getElementById(id);
+    let listContainer = legendContainer.querySelector('ul');
+  
+    if (!listContainer) {
+      listContainer = document.createElement('ul');
+      listContainer.style.display = 'flex';
+      listContainer.style.flexDirection = 'column-reverse';
+      listContainer.style.margin = 0;
+      listContainer.style.padding = '0';
+      listContainer.style.position = 'absolute';
+      listContainer.style.top = '-96px';
+      listContainer.style.marginLeft = '251px';
+      
+  
+      legendContainer.appendChild(listContainer);
+    }
+  
+    return listContainer;
+  };
+  
+  const htmlLegendPlugin = {
+    id: 'htmlLegend',
+    afterUpdate(chart, args, options) {
+      const ul = getOrCreateLegendList(chart, options.containerID);
+  
+      // Remove old legend items
+      while (ul.lastChild) {
+        ul.lastChild.remove();
+      }
+  
+      // Reuse the built-in legendItems generator
+      const items = chart.options.plugins.legend.labels.generateLabels(chart);
+  
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.style.alignItems = 'left';
+        li.style.cursor = 'pointer';
+        li.style.display = 'flex';
+        li.style.flexDirection = 'row';
+  
+        li.onclick = () => {
+          const {type} = chart.config;
+          if (type === 'pie' || type === 'doughnut') {
+            // Pie and doughnut charts only have a single dataset and visibility is per item
+            chart.toggleDataVisibility(item.index);
+          } else {
+            chart.setDatasetVisibility(item.datasetIndex, !chart.isDatasetVisible(item.datasetIndex));
+          }
+          chart.update();
+        };
+  
+        // Color box
+        const boxSpan = document.createElement('span');
+        boxSpan.style.background = 'linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)';
+        boxSpan.style.borderColor = item.strokeStyle;
+        boxSpan.style.borderWidth = 0;
+        boxSpan.style.display = 'inline-block';
+        boxSpan.style.height = '10px';
+        boxSpan.style.marginRight = '5px';
+        boxSpan.style.marginTop = '7px';
+        boxSpan.style.width = '10px';
+        boxSpan.style.borderRadius = '50%';
+  
+        // Text
+        const textContainer = document.createElement('p');
+        textContainer.style.color = 'rgba(31, 32, 65, 0.75)';
+        textContainer.style.fontFamily = 'Montserrat, sans-serif';
+        textContainer.style.fontSize = '14px';
+        textContainer.style.lineHeight = '24px';
+        textContainer.style.margin = 0;
+        textContainer.style.padding = 0;
+        textContainer.style.textDecoration = item.hidden ? 'line-through' : '';
+  
+        const text = document.createTextNode(item.text);
+        textContainer.appendChild(text);
+  
+        li.appendChild(boxSpan);
+        li.appendChild(textContainer);
+        ul.appendChild(li);
+      });
+    }
+  };
+
+var mygraph = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        //labels: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
+        labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
+        datasets: [
+            {
+                label: 'голосов',
+                //backgroundColor: [orange , green,  purple, black ],
+                backgroundColor: [ black, purple, green , orange ],
+                borderColor: '#fff',
+                data: [0, 65, 65, 130 ]
+                //data: [130, 65, 65, 0 ]
+            }]
+        },
+        options: {
+            layout: {
+                padding: {
+                    right: 1,
+                }
+            },
+            cutout: "90%",
+            maintainAspectRatio: false,
+            plugins: {
+                htmlLegend: {
+                    // ID of the container to put the legend in
+                    containerID: 'chartjslegend',
+                },
+                legend: {
+                    display: false
+                    }
+                }
+        },
+        plugins: [htmlLegendPlugin],
 });
