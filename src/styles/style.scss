@@ -538,7 +538,8 @@ h1 {
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 40px 30px 30px;
+    padding: 40px 29px 30px;
+    margin-left: 1px;
 
     &__room {
         display: flex;
@@ -556,6 +557,8 @@ h1 {
     &__room-text {
         display: inline;
         @include h1-font;
+        font-size: 25px;
+        margin-right: 3px;
     }
 
     &__room-text--small {
@@ -576,7 +579,7 @@ h1 {
         color: $pur;
         width: 40px;
         margin-right: 5px;
-        margin-left: 8px;
+        margin-left: 4px;
         margin-bottom: 1px;
         padding-right: 2px;
         text-transform: uppercase;

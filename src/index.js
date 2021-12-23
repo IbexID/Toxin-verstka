@@ -323,6 +323,22 @@ const getOrCreateLegendList = (chart, id) => {
       });
     }
   };
+const datapoints = [0, 65, 65, 130 ];
+  const counter = {
+    id: 'counter',
+    beforeDraw( chart, args, options ) {
+        const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+        ctx.save();
+        ctx.font = 'bold 24px Montserrat';
+        ctx.lineHeight = '29px';
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#BC9CFF';
+        ctx.fillText(datapoints.reduce(function(a, b) { return a + b }, 0), width/2, top + (height / 2)-2);
+        ctx.font = 'normal 15px Montserrat';
+        ctx.lineHeight = '15px';
+        ctx.fillText('голосов', width/2, top + (height / 2)+ 17);
+    }
+}; 
 
 var mygraph = new Chart(ctx, {
     type: 'doughnut',
@@ -335,7 +351,7 @@ var mygraph = new Chart(ctx, {
                 //backgroundColor: [orange , green,  purple, black ],
                 backgroundColor: [ black, purple, green , orange ],
                 borderColor: '#fff',
-                data: [0, 65, 65, 130 ]
+                data: datapoints,
                 //data: [130, 65, 65, 0 ]
             }]
         },
@@ -347,6 +363,11 @@ var mygraph = new Chart(ctx, {
             },
             cutout: "90%",
             maintainAspectRatio: false,
+            title: {
+                display: true,
+                text: '260',
+                position: 'bottom',
+            },
             plugins: {
                 htmlLegend: {
                     // ID of the container to put the legend in
@@ -357,5 +378,5 @@ var mygraph = new Chart(ctx, {
                     }
                 }
         },
-        plugins: [htmlLegendPlugin],
+        plugins: [htmlLegendPlugin, counter],
 });
