@@ -57,7 +57,9 @@ let apply = {
     }
 }
 // calendars for registration-form
-let arrival, departure, datedropdown;
+let arrival, departure, datedropdown, arrival2, departure2;
+var $ar2 = $('#arrival2'),
+    $de2 = $('#departure2');
 arrival = new AirDatepicker('#arrival', {
     onSelect({
         date
@@ -76,7 +78,7 @@ departure = new AirDatepicker('#departure', {
     onSelect({
         date
     }) {
-        arrival.update({
+        arrival2.update({
             maxDate: date
         })
     },
@@ -85,24 +87,27 @@ departure = new AirDatepicker('#departure', {
     range: true,
 
 })
-departure = new AirDatepicker('#arrival2', {
-    onSelect({
-        date
-    }) {
-        arrival.update({
-            maxDate: date
-        })
-    },
+arrival2 = new AirDatepicker('#arrival2', {
+    onSelect({formattedDate, date}) 
+        {
+        departure2.update({
+            minDate: date,
+            }),
+        $de2.focus();
+        },
     autoClose: false,
+    minDate: new Date(),
+    range: true,
     buttons: ['clear', apply],
 
 })
-departure = new AirDatepicker('#departure2', {
+departure2 = new AirDatepicker('#departure2', {
+    minDate: new Date(),
     onSelect({
         date
     }) {
-        arrival.update({
-            maxDate: date
+        arrival2.update({
+            maxDate: date,
         })
     },
     autoClose: false,
@@ -156,7 +161,6 @@ datedropdown = new AirDatepicker('#filterdate', {
     minDate: new Date(),
     autoClose: true,
     range: true,
-
 })
 
 
