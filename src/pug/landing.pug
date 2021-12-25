@@ -5,13 +5,12 @@ html
     body
         include ui-kit/mixin
         main.main
-            .header__wrapper
-                include ui-kit/headers/header
             .landing__wrapper
+                .header__container
+                    include ui-kit/headers/header
                 .landing__container 
                     .landing__room-finder
                         include ui-kit/cards/room-finder
                     p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-            .footer__wrapper 
-                include ui-kit/headers/footer
-            
+                .footer__wrapper 
+                    include ui-kit/headers/footer

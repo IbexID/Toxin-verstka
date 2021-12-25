@@ -67,7 +67,10 @@ mixin guest-dropdown
 mixin arrow-button(title, classname)
     .pay(class=classname)
         button.pay__button #{title}
-            span.material-icons.pay__arrow arrow_forward
+mixin arrow-button-wide(title, classname)
+    .pay(class=classname)
+        button.pay__button 
+            p.pay__button-text #{title}
 mixin text-field(placeholder, name, classname)
     .text-field(class=classname)
         label.text-field__label
@@ -278,7 +281,7 @@ mixin roomluxe(img1, img2, img3, img4, roomnum, graytextprice, rating, reviewnum
                     +graytext(reviewnum, 'Отзывов', 'book-form__room-text--price book-form__room-text--normalprice')
 mixin filterdropdown(id)
     .filterdate 
-        span.material-icons.date-dropdown__icon expand_more
+        span.material-icons.date-dropdown__icon.date-dropdown__icon--wide expand_more
         input.filterdate__input.datepicker-here(type='text' id=id placeholder="Выберите даты")
 mixin rangeslider 
     .range-slider

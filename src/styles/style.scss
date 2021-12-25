@@ -3,6 +3,12 @@
 @import 'reset';
 @import 'global';
 
+.body--gray{
+    background: #F4F4F6;
+}
+.body--white{
+    background: #fff;
+}
 
 h1 {
     @include h1-font;
@@ -109,11 +115,13 @@ h1 {
     &__field-name--h2 {
         @include h2-font;
         margin-bottom: 74px;
+        font-weight: normal;
     }
 
     &__field-name--h3 {
         @include h3-font;
         margin-bottom: 50px;
+        font-weight: normal;
     }
 
     &__field-name--body {
@@ -158,18 +166,18 @@ h1 {
     height: 70px;
     background: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0px 10px 20px $ds5;
     position: relative;
-
+    &__wrapper{
+        width: 1160px;
+        display: flex;
+        justify-content: space-between;
+    }
     &__logo {
         display: flex;
-        padding: 15px 0px 15px 139px;
-    }
-
-    &__logo-img--logged {
-        margin-right: 1px;
+        padding: 15px 0px
     }
 
     &__navbar {
@@ -177,19 +185,19 @@ h1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 770px;
+        width: 769px;
         height: 70px;
-        margin-right: 141px;
     }
 
     &__navbar--logged {
-        width: auto;
+        width: fit-content;
         display: flex;
-        margin-right: 121px;
+        justify-content: flex-end;
+        margin-right: 1px;
     }
 
     &__navbar-list {
-        width: 466px;
+        width: fit-content;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -197,6 +205,7 @@ h1 {
 
     &__navbar-list--logged {
         position: relative;
+        justify-content: flex-start;
 
         &:nth-child(5) {
             width: 92px;
@@ -216,11 +225,16 @@ h1 {
         @include text-font;
         color: $ds50;
         line-height: 17px;
-        padding-right: 21px;
+        margin-right: 21px;
     }
-
+    &__navbar-item--logged{
+        margin-right: 0;
+        height: 30px;
+        padding-left: 20px;
+        border-left: 1px solid #E5E5E5;
+    }
     &__navbar-item:nth-of-type(4) {
-        padding-right: 20px;
+        margin-right: 20px;
 
 
 
@@ -324,12 +338,10 @@ h1 {
     }
 
     &__separator {
-        padding-right: 2px;
         padding-left: 0px;
-        margin-right: 19px;
         width: 1px;
         height: 30px;
-        background-color: #E5E5E5;
+        margin-right: 1px;
     }
 }
 
@@ -435,6 +447,7 @@ h1 {
     }
 
     &__copyright-links {
+        margin-top: 3px;
         display: flex;
         width: 112px;
         justify-content: space-between;
@@ -479,10 +492,21 @@ h1 {
     }
 }
 
-.cards__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+.cards{
+    &__wrapper {
+    padding-top: 40px;
+    padding-left: 140px;
+    display: flex;
+
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+    }
+    &__item{
+        margin-bottom: 40px;
+    }
 }
 
 .room-finder {
@@ -493,7 +517,7 @@ h1 {
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 
     &__container {
         padding: 0 30px;
@@ -547,6 +571,7 @@ h1 {
         width: 320px;
         align-items: baseline;
         padding-bottom: 10px;
+        margin-right: 1px;
     }
 
     &__room-info {
@@ -558,7 +583,9 @@ h1 {
         display: inline;
         @include h1-font;
         font-size: 25px;
-        margin-right: 3px;
+    }
+    &__room-number .book-form__room-text:nth-of-type(2){
+        margin: 0 3px;
     }
 
     &__room-text--small {
@@ -586,7 +613,7 @@ h1 {
     }
 
     &__room-text--card {
-        margin-left: 8px;
+        margin-left: 6px;
     }
 
     &__room-price {
@@ -715,16 +742,12 @@ h1 {
     display: flex;
     flex-direction: column;
     background: #fff;
-    padding: 39px 30px 45px;
+    padding: 40px 29px 45px;
     margin-bottom: 20px;
     @include shadow;
-
-    &__heading {
-        @include h1-font;
-        color: $ds100;
-        margin-bottom: 20px;
+    .form__h1title{
+        margin-bottom: 21px;
     }
-
     &__sex {
         padding-top: 5px;
         display: flex;
@@ -798,9 +821,11 @@ h1 {
     background: #fff;
     padding: 39px 30px 45px;
     @include shadow;
-
+    .form__h1title{
+        margin-bottom: 21px;
+    }
     &__button {
-        margin-top: 19px;
+        margin-top: 20px;
         margin-bottom: 28px;
     }
 
@@ -870,25 +895,28 @@ h1 {
 }
 
 .landing {
-    &__container {
+
+    &__wrapper {
         position: relative;
         background-size: cover;
         height: 900px;
         width: 100%;
         background-image: url('../images/background.jpg');
     }
-
+    &__container{
+        height: 830px;
+    }
     &__room-finder {
         position: absolute;
         top: 139px;
-        left: 138px;
+        left: 139px;
     }
 
     &__text {
         position: absolute;
         text-align: right;
         bottom: 21px;
-        right: 135px;
+        right: 134px;
         display: block;
         @include text-font;
         width: 297px;
@@ -913,8 +941,8 @@ h1 {
 
     &__register-form {
         position: absolute;
-        top: 89px;
-        left: 531px;
+        top: 88px;
+        left: 533px;
     }
 }
 
@@ -963,14 +991,13 @@ h1 {
     }
 
     &__filter {
-        &-container {
-            width: 266px;
-        }
-
         display: flex;
         flex-direction: column;
     }
-
+    &__filter-container {
+        width: 266px;
+        margin-left: 1px;
+    }
     &__filter-item {
         margin-bottom: 10px;
 
@@ -990,9 +1017,6 @@ h1 {
             }
         }
     }
-
-    &__filter-item .richcheckbox {}
-
     &__filter-item .range-slider {
         margin-top: 22px;
     }
@@ -1010,17 +1034,18 @@ h1 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-row-gap: 20px;
+        grid-row-gap: 21px;
         grid-column-gap: 12px;
     }
 
     &__rooms-container {
         margin-top: 10px;
+        margin-left: 59px;
     }
 
     &__rooms-pagination {
         margin-left: 288px;
-        margin-top: 41px;
+        margin-top: 40px;
         width: 241px;
     }
 }
@@ -1156,4 +1181,27 @@ h1 {
 
 }
 
+.index{
+    &__nav{
+        margin: 230px 40px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        text-decoration: underline;
+    }
+}
+.index{
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        a{
+            margin-bottom: 20px;
+        }
+    }
+}
 @import 'forms.scss';

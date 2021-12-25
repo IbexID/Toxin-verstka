@@ -5,8 +5,7 @@ html
     body
         include ui-kit/mixin
         main.roomdet__main
-            .header__wrapper
-                include ui-kit/headers/header
+            include ui-kit/headers/header
             .roomdet__wrapper
                 .roomdet__img-container 
                     img.roomdet__img(src=require("../images/roomdetail/roomdet1.jpg"), alt="img")
@@ -41,6 +40,7 @@ html
                             p.roomdet__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                     .roomdet__book-form
                         include ui-kit/cards/book-form
-            .footer__wrapper 
+            .footer__wrapper
+                .footer__border
                 include ui-kit/headers/footer
             

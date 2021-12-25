@@ -1,14 +1,25 @@
 doctype html
 html
     head
-    body
+        title Cards
+    body.body--gray
         include ui-kit/mixin
         include ui-kit/colorstype/header-logo.pug
         .cards__wrapper
-            include ui-kit/cards/room-finder
-            include ui-kit/cards/book-form
-            include ui-kit/cards/calendar
-            include ui-kit/cards/register-form
-            include ui-kit/cards/login-form
-            include ui-kit/cards/room.pug
-            include ui-kit/cards/room.pug
+            .cards__container
+                .cards__item
+                    include ui-kit/cards/room-finder
+                .cards__item
+                    include ui-kit/cards/register-form
+            .cards__container
+                .cards__item
+                    include ui-kit/cards/book-form
+                .cards__item
+                    include ui-kit/cards/login-form
+            .cards__container
+                .cards__item
+                    include ui-kit/cards/calendar
+                .cards__item
+                    +roomluxe('room1', 'room4', 'room5', 'room6', '888', '9 990₽', 'rating5', '19', 'Отзывов')
+                .cards__item
+                    +room('room2', 'room4', 'room5', 'room6', '840', '9 900₽', 'rating4', '65', 'Отзывов')

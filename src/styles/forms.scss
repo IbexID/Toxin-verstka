@@ -33,7 +33,7 @@
         margin-bottom: 0;
     }
     &-container {
-
+        margin-bottom: 30px;
         width: 320px;
         position: relative;
     }
@@ -63,12 +63,16 @@
         text-transform: uppercase;
         position: absolute;
         right: 2px;
-        bottom: 70px;
+        bottom: 45px;
     }
 }
 
 .masked-text-field {
     @include field;
+    &__input{
+        @include text-font;
+        color: $ds75;
+    }
 }
 
 .subscription-text-field {
@@ -88,6 +92,7 @@
     }
 
     &__icon {
+        cursor: pointer;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         -webkit-background-clip: text;
         background-clip: none;
@@ -407,6 +412,7 @@
     &__scale {
         display: flex;
         flex-direction: row-reverse;
+        margin-right: 20px;
     }
 
     &__label {
@@ -570,14 +576,14 @@
     width:95px;
 }
 .pay {
-    margin-right: 4px;
-    margin-top: 1px;
+    margin-right: 5px;
     &--margin{
         margin-top: 7px;
         margin-bottom: 26px;
     }
     &__button {
         @include h3-font;
+        justify-content: center;
         text-transform: uppercase;
         color: #fff;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -590,13 +596,18 @@
         &:hover {
             opacity: .5;
         }
+        &::before{
+            position: absolute;
+            font-family: "Material Icons";
+            content: '\e5c8';
+            font-size: 24px;
+            font-weight: normal;
+            right: 10px;
+            top: 15px;
+        }
     }
-
-    &__arrow {
-        position: absolute;
-        content: '';
-        right: 9px;
-        top: 11px;
+    &__button-text{
+        margin-right: 3px;
     }
 }
 
@@ -976,7 +987,7 @@
 
     &__profile-img {
         object-fit:cover;
-        min-height: 100%;
+        min-height: 44px;
         width: auto;
         border-radius: 50%;
         border: 2px solid #fff;
@@ -1034,13 +1045,14 @@
         width: 320px;
     }
     &__icon {
+        cursor: pointer;
         position: absolute;
         z-index: 2;
         top: 11px;
         left: 117px;
     }
     &__icon--wide{
-        left: 280px;
+        left: 232px;
     }
     &__icon--inv{
         opacity: 0;
@@ -1062,7 +1074,7 @@
     &--content {
         height: 240px;
         padding: 20px;
-        padding-bottom: 9px;
+        padding-bottom: 5px;
     }
 
     --adp-day-cell-width: 40px;
@@ -1251,7 +1263,7 @@
 
     &--buttons {
         border-top: none;
-        padding: 0 14px;
+        padding: 0 15px 0 13px;
     }
 
     &-buttons {
@@ -1283,11 +1295,7 @@
         @include text-font;
         text-transform: lowercase;
         padding-bottom: 3px;
-        
-    }
-
-    .date-dropdown__icon {
-        left: 165px;
+        width: 266px;
     }
 }
 

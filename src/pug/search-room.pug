@@ -5,8 +5,7 @@ html
     body
         include ui-kit/mixin
         main.search__main
-            .header__wrapper
-                include ui-kit/headers/header
+            include ui-kit/headers/header
             .search__wrapper
                 .search__filter-container 
                     .search__filter
@@ -35,7 +34,7 @@ html
                     +h1heading('Номера, которые мы для вас подобрали')
                     .search__rooms
                         .search__rooms-item 
-                            +roomluxe('room1', 'room4', 'room5', 'room6', '888', '9 990₽', 'rating5', '19', 'Отзывов')
+                            +roomluxe('room1', 'room4', 'room5', 'room6', '888', '9 990₽', 'rating5', '19')
                         .search__rooms-item 
                             +room('room2', 'room4', 'room5', 'room6', '840', '9 900₽', 'rating4', '65', 'Отзывов')
                         .search__rooms-item 
