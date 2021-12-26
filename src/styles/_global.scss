@@ -51,6 +51,7 @@ input[type='text'],[type='email']{
         border: 1px solid $ds25;
         border-radius: 4px;
 		padding-left: 14px;
+		padding-right: 6px;
         &::placeholder {
             @include text-font;
             line-height: 18px;

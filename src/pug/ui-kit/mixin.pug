@@ -8,7 +8,7 @@ mixin instagram
     a.footer__copyright-link(href='#')
         img.footer__copyright-img(alt='instagram', src=require("../images/svg/instagram.png"))
 mixin logo(classname)
-    img(src=require("../images/svg/logo.svg"))
+    img(alt="logo" src=require("../images/svg/logo.svg"))
 mixin symbol(name, classname)
     span.material-icons(class=classname) #{name}
 mixin symbol-out(name, classname)
@@ -31,12 +31,12 @@ mixin bigbutton-tr(name)
 mixin button(name)
     button.button #{name}
 mixin calendar(id)
-    .date-dropdown 
+    form.date-dropdown 
         label.date-dropdown__label
         span.material-icons.date-dropdown__icon expand_more
         input.datepicker-here.date-dropdown__input(placeholder='ДД.ММ.ГГГГ' type="text" id=id)
 mixin calendarwide(id, classname1, classname2)
-    .date-dropdown 
+    form.date-dropdown 
         label.date-dropdown__label
         span.material-icons.date-dropdown__icon(class=classname2) expand_more
         input.datepicker-here.date-dropdown__input(placeholder='ДД.ММ.ГГГГ' type="text" id=id, class=classname1)
@@ -48,13 +48,13 @@ mixin h2heading(title)
     h2.form__h2title #{title}
 mixin guest-dropdown 
     .iqdropdown-guest(id='iqdropdown2')
-        p.iqdropdown-selection ...
+        p.iqdropdown-selection Сколько гостей
         .iqdropdown-menu 
             .iqdropdown-menu-option(data-id="guest1"  data-defaultcount="0" data-mincount="0" data-maxcount="4")
-                div 
+                div.iqdropdown-menu-div 
                     p.iqdropdown-item взрослые
             .iqdropdown-menu-option(data-id="guest2" data-defaultcount="0" data-mincount="0" data-maxcount="6")
-                div 
+                div.iqdropdown-menu-div
                     p.iqdropdown-item дети
             .iqdropdown-menu-option(data-id="guest3" data-defaultcount="0" data-mincount="0" data-maxcount="2")
                 div 
@@ -72,25 +72,25 @@ mixin arrow-button-wide(title, classname)
         button.pay__button 
             p.pay__button-text #{title}
 mixin text-field(placeholder, name, classname)
-    .text-field(class=classname)
+    form.text-field(class=classname)
         label.text-field__label
             input.text-field__input(type="text", name="text-field" placeholder=placeholder)
 mixin email-field(classname)
-    .text-field(class=classname)
+    form.text-field(class=classname)
         label.text-field__label
             input.text-field__input(type="text", name="email" placeholder='Email')
 mixin pass-field(classname)
-    .text-field(class=classname)
+    form.text-field(class=classname)
         label.text-field__label
             input.text-field__input(type="text", name="password" placeholder='Пароль')
 mixin radio(value, name, title)
-    .radio-buttons__wrapper
+    form.radio-buttons__wrapper
         label.radio-buttons__label
             input.radio-buttons__input(type='radio' name=name value=value)
             span.radio-buttons__style 
             | #{title}
 mixin toggle(text)
-    .toggle 
+    form.toggle 
         label.toggle__label
             input.toggle__input(type='checkbox')
             span.toggle__slider
@@ -108,7 +108,7 @@ mixin graytext(text1, text2, classname)
         p.book-form__room-text.book-form__room-text--name(class=classname) #{text2}
 mixin rate(id1, id2, id3, id4, id5, name)
     .rate 
-        .rate__scale
+        form.rate__scale
             input.rate__input(checked id=id1 value='5' type="radio" name=name)
             label.rate__label.material-icons(for=id1)
             input.rate__input( id=id2 value='4' type="radio" name=name)
@@ -121,7 +121,7 @@ mixin rate(id1, id2, id3, id4, id5, name)
             label.rate__label.material-icons(for=id5)
 mixin rating1
     .rate 
-        .rate__scale
+        form.rate__scale
             input.rate__input(disabled  type="radio")
             label.rate__label.material-icons(for=id1)
             input.rate__input(disabled  type="radio")
@@ -134,7 +134,7 @@ mixin rating1
             label.rate__label.material-icons(for=id5)
 mixin rating2
     .rate 
-        .rate__scale
+        form.rate__scale
             input.rate__input(disabled  type="radio")
             label.rate__label.material-icons(for=id1)
             input.rate__input(disabled  type="radio")
@@ -147,7 +147,7 @@ mixin rating2
             label.rate__label.material-icons(for=id5)
 mixin rating3
     .rate 
-        .rate__scale
+        form.rate__scale
             input.rate__input(disabled  type="radio")
             label.rate__label.material-icons(for=id1)
             input.rate__input(disabled  type="radio")
@@ -160,7 +160,7 @@ mixin rating3
             label.rate__label.material-icons(for=id5)
 mixin rating4
     .rate 
-        .rate__scale
+        form.rate__scale
             input.rate__input(disabled  type="radio")
             label.rate__label.material-icons(for=id1)
             input.rate__input(disabled checked type="radio")
@@ -173,7 +173,7 @@ mixin rating4
             label.rate__label.material-icons(for=id5)
 mixin rating5
     .rate 
-        .rate__scale
+        form.rate__scale
             input.rate__input(disabled checked type="radio")
             label.rate__label.material-icons(for=id1)
             input.rate__input(disabled  type="radio")
@@ -221,29 +221,29 @@ mixin signin
             .login-form__login-link
                 +bigbutton-tr('создать')
 mixin room1
-    img(src=require("../images/rooms/1.jpg"))
+    img(alt="room 1" src=require("../images/rooms/1.jpg"))
 mixin room2
-    img(src=require("../images/rooms/2.jpg"))
+    img(alt="room 2" src=require("../images/rooms/2.jpg"))
 mixin room3
-    img(src=require("../images/rooms/3.jpg"))
+    img(alt="room 3" src=require("../images/rooms/3.jpg"))
 mixin room4
-    img(src=require("../images/rooms/4.jpg"))
+    img(alt="room 4" src=require("../images/rooms/4.jpg"))
 mixin room5
-    img(src=require("../images/rooms/5.jpg"))
+    img(alt="room 5" src=require("../images/rooms/5.jpg"))
 mixin room6
-    img(src=require("../images/rooms/6.jpg"))
+    img(alt="room 6" src=require("../images/rooms/6.jpg"))
 mixin room7
-    img(src=require("../images/rooms/7.jpg"))
+    img(alt="room 7" src=require("../images/rooms/7.jpg"))
 mixin room8
-    img(src=require("../images/rooms/8.jpg"))
+    img(alt="room 8" src=require("../images/rooms/8.jpg"))
 mixin room9
-    img(src=require("../images/rooms/9.jpg"))
+    img(alt="room 9" src=require("../images/rooms/9.jpg"))
 mixin room10
-    img(src=require("../images/rooms/10.jpg"))
+    img(alt="room 10" src=require("../images/rooms/10.jpg"))
 mixin room11
-    img(src=require("../images/rooms/11.jpg"))
+    img(alt="room 11" src=require("../images/rooms/11.jpg"))
 mixin room12
-    img(src=require("../images/rooms/12.jpg"))
+    img(alt="room 12" src=require("../images/rooms/12.jpg"))
 mixin room(img1, img2, img3, img4, roomnum, graytextprice, rating, reviewnum)
     .room 
         .room__img
@@ -280,7 +280,7 @@ mixin roomluxe(img1, img2, img3, img4, roomnum, graytextprice, rating, reviewnum
                 .room__rating-text
                     +graytext(reviewnum, 'Отзывов', 'book-form__room-text--price book-form__room-text--normalprice')
 mixin filterdropdown(id)
-    .filterdate 
+    form.filterdate 
         span.material-icons.date-dropdown__icon.date-dropdown__icon--wide expand_more
         input.filterdate__input.datepicker-here(type='text' id=id placeholder="Выберите даты")
 mixin rangeslider 
@@ -288,7 +288,7 @@ mixin rangeslider
         span.range-slider__result(id="result")
         .range-slider__slide(id="slider") 
 mixin expcheckbox(name)
-    .expandable-list
+    form.expandable-list
         label.expandable-list__title-label(for="expandable-checkbox-list") 
             input.expandable-list__title-input(id="expandable-checkbox-list" type='checkbox')
             p.expandable-list__title-text #{name}
@@ -334,7 +334,7 @@ mixin up(icon, title, text, classname)
                 p.ups__text #{text}
         .ups__separator(class=classname)
 mixin like(number, checked, clicked)
-    .like 
+    form.like 
         label.like__label
             input.like__input(class=clicked type="checkbox" checked=checked )
             span.material-icons.like__icon
@@ -343,7 +343,7 @@ mixin review(name, date, avatar, text, number, checked, clicked)
     .review
         .review__profile
             .review__profile-avatar
-                img.review__profile-img(src=require("../images/reviews" + avatar))
+                img.review__profile-img(alt="profile pic" src=require("../images/reviews" + avatar))
             .review__like 
                 +like(number, checked, clicked)
         .review__info
