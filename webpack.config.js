@@ -9,7 +9,7 @@ const fs = require('fs')
 const PATHS = {
     src: path.resolve(__dirname, './src'),
     dist: path.resolve(__dirname, './dist'),
-    assets: 'assets/'
+    assets: 'assets/',
 }
 const PAGES_DIR = `${PATHS.src}\\pug\\`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
@@ -21,6 +21,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin(),
         ...PAGES.map(page => new HtmlWebpackPlugin({
+            favicon: `${PATHS.src}\\favicons\\favicon.ico`,
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`,
           })),
@@ -43,6 +44,9 @@ module.exports = {
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext][query]'
+                  }
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf|)$/,

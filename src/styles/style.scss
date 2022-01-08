@@ -3,6 +3,8 @@
 @import 'reset';
 @import 'global';
 
+@import '../pug/ui-kit/headers/header-logo/header-logo.scss';
+
 .body--gray{
     background: #F4F4F6;
 }
@@ -14,12 +16,7 @@ h1 {
     @include h1-font;
 }
 
-.tr-logo {
-    top: 0;
-    left: 0;
-    display: block;
-    padding: 30px;
-}
+
 
 .ds100 {
     background: $ds100;
@@ -848,7 +845,7 @@ h1 {
 .room,
 .roomluxe {
     height: 257px;
-    width: 270px;
+    width: 268px;
     background-color: #fff;
     @include shadow;
     border: none;

@@ -1,0 +1,28 @@
+.form {
+    background-color: #fff;
+    width: 100%;
+    height: max-content;
+    padding-left: 110px;
+    padding-top: 110px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr 1fr);
+    &__title {
+        margin-top: 10px;
+        @include h3-font;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    &__title--acc{
+        margin-bottom: 5px;
+    }
+    &__h1title{
+        @include h1-font;
+        text-transform: initial;
+        margin-bottom: 23px;
+        margin-right: 1px;
+    }
+    &__h2title{
+        @include h2-font;
+        margin-bottom: 20px;
+    }
+}
