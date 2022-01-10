@@ -351,4 +351,8 @@ mixin review(name, date, avatar, text, number, checked, clicked)
             p.review__info-date #{date}
             p.review__info-text.
                 #{text}
-
+mixin subscription 
+    .subscription-text-field 
+        label.subscription-text-field__label(for="subscribe")
+            input.subscription-text-field__input(type='email' placeholder="Email")
+            span.material-icons.subscription-text-field__icon arrow_forward

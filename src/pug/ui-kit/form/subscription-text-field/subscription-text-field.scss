@@ -1,0 +1,27 @@
+.subscription-text-field {
+    width: 320px;
+    margin-bottom: 40px;
+    display: block;
+
+    &__label {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        width: 260px;
+        padding-right: 35px;
+    }
+
+    &__icon {
+        cursor: pointer;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        -webkit-background-clip: text;
+        background-clip: none;
+        color: transparent;
+        position: absolute;
+        top: 10px;
+        left: 225px;
+    }
+}

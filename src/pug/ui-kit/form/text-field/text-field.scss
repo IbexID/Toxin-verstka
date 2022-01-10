@@ -1,0 +1,39 @@
+.text-field {
+    @include field;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    &-container {
+        margin-bottom: 30px;
+        width: 320px;
+        position: relative;
+    }
+
+    &__label {
+        margin-bottom: 0px;
+    }
+
+    &__input {
+        width: 320px;
+    }
+
+    &__input--hover {
+        width: 320px;
+        border: 1px solid $ds50 !important;
+
+        &::placeholder {
+            color: $ds75 !important;
+        }
+    }
+
+    &__descr {
+        z-index: 1;
+        @include h3-font;
+        color: $ds50;
+        font-weight: normal;
+        text-transform: uppercase;
+        position: absolute;
+        right: 2px;
+        bottom: 45px;
+    }
+}

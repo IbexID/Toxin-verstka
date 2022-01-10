@@ -1,0 +1,84 @@
+.checkbox-buttons {
+    background-color: #fff;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+
+    &__list {
+        margin-top: 12px;
+        display: block;
+        margin-left: 0px;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 31px;
+    }
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    &__label {
+        @include text-font;
+        line-height: 18px;
+        text-transform: none;
+        color: $ds50;
+        margin: 0 6px 12px 0px;
+        padding-left: 30px;
+        position: absolute;
+        width: 230px;
+    }
+
+    &__style {
+        position: absolute;
+        top: -1px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $ds25;
+        border-radius: 4px;
+    }
+}
+
+.checkbox-buttons__input:checked~.checkbox-buttons__style::before {
+    content: '';
+    width: 8px;
+    height: 6px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.checkbox-buttons__input:checked~.checkbox-buttons__style::after {
+    content: '';
+    width: 8px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 17%;
+    left: 28%;
+    transform: translate(-30%, -30%);
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.checkbox-buttons__input:checked~.checkbox-buttons__style {
+    border: 1px solid #BC9CFF;
+    transition: all 0.1s;
+}
+
+.checkbox-buttons__input:hover~.checkbox-buttons__style,
+.checkbox-buttons__input:focus~.checkbox-buttons__style {
+    border: 1px solid #8BA4F9;
+    transition: all 0.1s;
+}

@@ -1,0 +1,66 @@
+.font{
+    display: flex;
+    justify-content: start;
+    &-container {
+    margin-right: 158px;
+    margin-top: 145px;
+    }
+    &__field {
+        display: flex;
+        flex-direction: column;
+        min-width: 60px;
+        padding-right: 20px;
+    }
+
+    &__field-name {
+        @include h1-font;
+        color: $ds25 !important;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    &__field-name--h2 {
+        @include h2-font;
+        margin-bottom: 74px;
+        font-weight: normal;
+    }
+
+    &__field-name--h3 {
+        @include h3-font;
+        margin-bottom: 50px;
+        font-weight: normal;
+    }
+
+    &__field-name--body {
+        @include text-font;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__description-text {
+        margin-bottom: 51px;
+    }
+
+    &__description-text--h1 {
+        @include h1-font;
+        max-width: 369px;
+    }
+
+    &__description-text--h2 {
+        @include h2-font;
+        max-width: 312px;
+    }
+
+    &__description-text--h3 {
+        @include h3-font;
+        max-width: 186px;
+    }
+
+    &__description-text--body {
+        @include text-font;
+        max-width: 301px;
+    }
+}

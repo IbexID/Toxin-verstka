@@ -1,0 +1,159 @@
+.header {
+    @include text-font;
+    line-height: 17px;
+    padding-right: 0px;
+    width: 1440px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 20px $ds5;
+    position: relative;
+    &__wrapper{
+        width: 1160px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        display: flex;
+        padding: 15px 0px
+    }
+
+    &__navbar {
+        color: $ds50;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 769px;
+        height: 70px;
+    }
+    &__navbar-list {
+        width: fit-content;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__navbar-item--active {
+        font-weight: 700;
+        line-height: 17px;
+        width: fit-content;
+        color: $ds75;
+    }
+
+    &__navbar-item {
+        display: flex;
+        align-items: center;
+        @include text-font;
+        color: $ds50;
+        line-height: 17px;
+        margin-right: 21px;
+    }
+    &__navbar-item:nth-of-type(4) {
+        margin-right: 20px;
+
+    }
+
+    &__navbar-icon {
+        line-height: 20px;
+        width: 21px;
+        height: 24px;
+        margin: 5px 2px 0 0px;
+        position: relative;
+
+        &:hover .header__droplist {
+            display: block;
+        }
+    }
+
+    &__droplist {
+        display: none;
+        position: absolute;
+        top: 18px;
+        left: -92px;
+        min-width: 116px;
+        @include text-font;
+        border-radius: 6px;
+        color: $ds50;
+        z-index: 3;
+        margin-top: 6px;
+    }
+
+    &__droplist--service {
+        min-width:90px;
+        left: -70px;
+    }
+
+    &__droplist-item {
+        background: #fff;
+        border: solid 2px $ds5;
+        border-top: 0;
+        border-bottom: 0;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        text-align: center;
+        box-shadow: 2px 2px 6px 2px $ds50;
+
+        &:hover {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            box-shadow: 2px 2px 2px 2px $ds5;
+            color: $ds75;
+            
+        }
+
+        &:last-child {
+
+            border: solid 2px $ds5;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        width: 303px;
+    }
+
+    &__buttons-list {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+
+    &__buttons-item {
+        text-transform: uppercase;
+        padding: 11px 20px 10px 0;
+        position: relative;
+        @include h3-font;
+        text-align: center;
+        border-radius: 24px;
+    }
+
+    &__buttons-gradient {
+        position: relative;
+        background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
+        padding: 2px;
+        border-radius: 24px;
+    }
+
+    &__buttons-item--login {
+        color: $pur;
+        background: #fff;
+        border-radius: 22px;
+        padding: 8px 18px;
+    }
+
+    &__buttons-item--reg {
+        color: #fff;
+        background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
+        border-radius: 22px;
+        padding: 10px 20px;
+    }
+
+    &__separator {
+        padding-left: 0px;
+        width: 1px;
+        height: 30px;
+        margin-right: 1px;
+    }
+}

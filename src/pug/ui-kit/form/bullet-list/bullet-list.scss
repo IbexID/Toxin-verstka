@@ -1,0 +1,25 @@
+.bullet {
+    @include text-font;
+    padding-bottom: 40px;
+
+    &__list {
+        width: 242px;
+        margin-left: 20px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 6px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $ds25;
+        }
+    }
+}

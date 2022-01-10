@@ -1,0 +1,128 @@
+.expandable-list {
+
+    background-color: #fff;
+    width: 266px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    position: relative;
+
+    &__control {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+
+    &__title-input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    &__title-text {
+        margin-top: 4px;
+        padding-bottom: 17px;
+    }
+
+    &__control {
+        color: $ds50;
+    }
+
+    &__list {
+        margin-top: 17px;
+        display: block;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    &__label {
+        @include text-font;
+        line-height: 18px;
+        text-transform: none;
+        color: $ds50;
+        margin: 0 0 11px 0px;
+        padding-left: 30px;
+        position: absolute;
+    }
+
+    &__style {
+        position: absolute;
+        top: -1px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $ds25;
+        border-radius: 4px;
+        left: 0;
+    }
+
+    &__style:last-child {
+        bottom: 1px;
+    }
+}
+.expandable-list__title-input~.expandable-list__collapse,
+.expandable-list__title-input:checked~.expandable-list__expand,
+
+.expandable-list__title-input~.expandable-list__list {
+    display: none;
+}
+
+.expandable-list__title-input:checked~.expandable-list__collapse,
+.expandable-list__title-input~.expandable-list__expand,
+.expandable-list__title-input:checked~.expandable-list__list {
+    display: block;
+}
+
+
+
+
+
+.expandable-list__input:checked~.expandable-list__style::before {
+    content: '';
+    width: 8px;
+    height: 6px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.expandable-list__input:checked~.expandable-list__style::after {
+    content: '';
+    width: 8px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 17%;
+    left: 28%;
+    transform: translate(-30%, -30%);
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.expandable-list__input:checked~.expandable-list__style {
+    border: 1px solid #BC9CFF;
+    transition: all 0.3s;
+}
+
+.expandable-list__input:hover~.expandable-list__style,
+.expandable-list__input:focus~.expandable-list__style {
+    border: 1px solid #8BA4F9;
+    transition: all 0.3s;
+}

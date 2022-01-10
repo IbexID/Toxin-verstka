@@ -80,3 +80,6 @@ label{
 button{
 	cursor: pointer;
 }
+h1 {
+    @include h1-font;
+}

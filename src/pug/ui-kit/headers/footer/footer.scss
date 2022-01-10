@@ -1,0 +1,134 @@
+.footer {
+    background-color: #fff;
+    width: 1440px;
+    min-height: 373px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    position: relative;
+
+    &__container {
+        min-width: 1160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__block {
+        padding-top: 100px;
+        max-width: 260px;
+    }
+
+    &__block:not(:first-of-type) {
+        margin-top: 5px;
+    }
+
+    &__block:nth-child(1) {
+        margin-right: 39px;
+    }
+
+    &__block:nth-child(2) {
+        margin-right: 57px;
+    }
+
+    &__block:nth-child(3) {
+        margin-right: 92px;
+    }
+
+    &__block:nth-child(4) {
+        margin-right: 51px;
+    }
+
+    &__list {
+        @include h3-font;
+        text-transform: uppercase;
+    }
+
+
+    &__item,
+    &__text {
+        @include text-font;
+        text-transform: none;
+    }
+
+    &__text {
+        padding-top: 18px;
+    }
+
+    &__item:first-child {
+        padding-top: 21px;
+    }
+
+    &__item {
+        padding-bottom: 20px;
+        color: $ds50;
+        line-height: 18px;
+    }
+
+    &__block:last-of-type .footer__item:first-of-type {
+        padding-top: 18px;
+        line-height: 24px;
+        padding-bottom: 22px;
+
+    }
+
+    &__copyright {
+        background: #fff;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__border {
+        border-top: solid 1px rgba(31, 32, 65, 0.1);
+    }
+
+    &__copyright-container {
+        position: relative;
+        min-width: 1161px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1px;
+    }
+
+    &__copyright-text {
+        @include text-font;
+        line-height: 17px;
+    }
+
+    &__copyright-links {
+        margin-top: 3px;
+        display: flex;
+        width: 112px;
+        justify-content: space-between;
+        line-height: 24px;
+    }
+
+    &__copyright-link {
+        display: block;
+        width: 22px;
+        margin-right: 22px;
+    }
+
+    &__copyright-img {
+        min-width: 22px;
+        min-height: 22px;
+    }
+
+    &__small {
+        width: 768px;
+        height: 367px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        box-shadow: 0px 10px 20px $ds5;
+    }
+
+    &__small-item {
+        padding: 20px 0 25px 0;
+    }
+}

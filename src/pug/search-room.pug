@@ -5,7 +5,7 @@ html
     body
         include ui-kit/mixin
         main.search__main
-            include ui-kit/headers/header
+            include ui-kit/headers/header/header
             .search__wrapper
                 .search__filter-container 
                     .search__filter
@@ -21,7 +21,7 @@ html
                             p.search__range-text Стоимость за сутки пребывания в номере
                         .search__filter-item
                             +heading('правила дома')
-                            include ui-kit/form/checkbox-buttons
+                            include ui-kit/form/checkbox-buttons/checkbox-buttons
                         .search__filter-item
                             +heading('доступность')
                             include ui-kit/form/rich-checkbox-buttons
@@ -60,5 +60,5 @@ html
                     .search__rooms-pagination 
                         include ui-kit/form/pagination
             .footer__wrapper 
-                include ui-kit/headers/footer
+                include ui-kit/headers/footer/footer
             
