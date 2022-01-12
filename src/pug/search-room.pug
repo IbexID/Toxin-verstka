@@ -24,10 +24,10 @@ html
                             include ui-kit/form/checkbox-buttons/checkbox-buttons
                         .search__filter-item
                             +heading('доступность')
-                            include ui-kit/form/rich-checkbox-buttons
+                            include ui-kit/form/rich-checkbox-buttons/rich-checkbox-buttons
                         .search__filter-item
                             +heading('удобства номера')
-                            include ui-kit/form/dropdown
+                            include ui-kit/form/dropdown/dropdown
                         .search__filter-item
                             +expcheckbox('дополнительные удобства')
                 .search__rooms-container
@@ -58,7 +58,7 @@ html
                         .search__rooms-item 
                             +room('room12', 'room4', 'room5', 'room6', '352', '5 000₽', 'rating3', '55', 'Отзывов')
                     .search__rooms-pagination 
-                        include ui-kit/form/pagination
+                        include ui-kit/form/pagination/pagination
             .footer__wrapper 
                 include ui-kit/headers/footer/footer
             

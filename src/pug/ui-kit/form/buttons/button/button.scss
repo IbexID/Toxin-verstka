@@ -1,0 +1,32 @@
+.button {
+    @include h3-font;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    color: #fff;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border: none;
+    height: 34px;
+    width: fit-content;
+    text-align: center;
+    padding: 10px 20px 9px 19px;
+
+    &__force-hov,
+    &:hover {
+        opacity: .5;
+    }
+
+    &__force-hov:hover {
+        opacity: 1;
+    }
+
+}
+
+.button--big{
+    padding: 0px 10px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    height: 40px;
+    width:95px;
+}

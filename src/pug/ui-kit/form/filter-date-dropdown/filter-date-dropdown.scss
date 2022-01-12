@@ -1,0 +1,26 @@
+.filterdate {
+    position: relative;
+    width: 266px;
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        @include text-font;
+        text-transform: lowercase;
+        padding-bottom: 3px;
+        width: 266px;
+    }
+    &-dropdown__icon {
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+        top: 11px;
+        left: 117px;
+    }
+    &-dropdown__icon--wide{
+        left: 232px;
+    }
+}

@@ -1,0 +1,28 @@
+.date-dropdown {
+    margin: 5px 20px 10px 0;
+    position: relative;
+
+    &__input {
+        @include text-font;
+        line-height: 18px;
+        width: 150px;
+        -webkit-appearance: none;
+        padding-left: 14px;
+    }
+    &__input--wide{
+        width: 320px;
+    }
+    &__icon {
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+        top: 11px;
+        left: 117px;
+    }
+    &__icon--wide{
+        left: 232px;
+    }
+    &__icon--inv{
+        opacity: 0;
+    }
+}

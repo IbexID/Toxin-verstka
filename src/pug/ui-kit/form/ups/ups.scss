@@ -1,0 +1,38 @@
+.ups {
+    @include text-font;
+
+    &__item {
+        width: 291px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        font-size: 48px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: transparent;
+        background-clip: none;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+
+    }
+
+    &__description {
+        margin-left: 10px;
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__separator {
+        width: 280px;
+        height: 1px;
+        background-color: rgba(#1F2041, .1);
+        margin-bottom: 20px;
+    }
+    &__separator--hidden{
+        display: none;
+    }
+}

@@ -1,0 +1,7 @@
+.masked-text-field {
+    @include field;
+    &__input{
+        @include text-font;
+        color: $ds75;
+    }
+}

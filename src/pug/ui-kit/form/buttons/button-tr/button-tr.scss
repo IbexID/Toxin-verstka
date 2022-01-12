@@ -1,0 +1,72 @@
+.button-tr {
+    @include h3-font;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    color: #fff;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border: none;
+    height: 34px;
+    width: fit-content;
+    text-align: center;
+    padding: 10px 20px 9px 19px;
+
+    &__force-hov,
+    &:hover {
+        opacity: .5;
+    }
+
+    &__force-hov:hover {
+        opacity: 1;
+    }
+    padding: 0px 10px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    height: 30px;
+    width:83px;
+    background: #fff;
+    color: $pur;
+
+}
+
+.button__gradient {
+    position: relative;
+    min-width: 87px;
+    height: 34px;
+    background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
+    margin-top: 0px;
+    border-radius: 24px;
+}
+.button__gradient--big{
+    position: relative;
+    min-width: 99px;
+    height: 44px;
+    background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
+    margin-top: 0px;
+    border-radius: 24px;
+}
+
+.button__gradient:hover,
+.button__force-gr {
+    z-index: 1;
+    height: 34px;
+    background: linear-gradient(180deg, rgba(188, 156, 255, .5), rgba(139, 164, 249, .5));
+    border-radius: 24px;
+}
+.button__gradient--big:hover{
+    height: 44px;
+}
+
+.button-tr:hover {
+    background: #fff;
+    opacity: 1;
+}
+.button--big{
+    padding: 0px 10px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    height: 40px;
+    width:95px;
+}

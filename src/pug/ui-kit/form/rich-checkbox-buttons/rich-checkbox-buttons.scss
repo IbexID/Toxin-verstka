@@ -1,0 +1,104 @@
+.richcheckbox {
+    background-color: #fff;
+    width: 266px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+    margin-top: 0px;
+
+    &__list {
+        margin-top: 15px;
+        display: block;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 62px;
+        position: relative;
+    }
+
+    &__item:first-child .richcheckbox__label .richcheckbox__text {
+        width: 200px;
+    }
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    &__label {
+        @include text-font;
+        line-height: 18px;
+        text-transform: none;
+        color: $ds50;
+        margin: 0px 0 12px 0px;
+        padding-left: 30px;
+        position: absolute;
+    }
+
+    &__name {
+        @include text-font;
+        line-height: 18px;
+        font-weight: 700;
+        margin-top: 2px;
+        margin-bottom: 6px;
+    }
+
+    &__text {
+        width: 234px;
+        font-family: Montserrat, Arial, sans-serif;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $ds50;
+    }
+
+    &__style {
+        position: absolute;
+        top: 1px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $ds25;
+        border-radius: 4px;
+    }
+}
+
+.richcheckbox__input:checked~.richcheckbox__style::before {
+    content: '';
+    width: 8px;
+    height: 6px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.richcheckbox__input:checked~.richcheckbox__style::after {
+    content: '';
+    width: 8px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 17%;
+    left: 28%;
+    transform: translate(-30%, -30%);
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.richcheckbox__input:checked~.richcheckbox__style {
+    border: 1px solid #BC9CFF;
+    transition: all 0.1s;
+}
+
+.richcheckbox__input:hover~.richcheckbox__style,
+.richcheckbox__input:focus~.richcheckbox__style {
+    border: 1px solid #8BA4F9;
+    transition: all 0.1s;
+}

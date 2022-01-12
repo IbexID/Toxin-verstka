@@ -1,0 +1,333 @@
+.iqdropdown  {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box
+}
+
+.iqdropdown *  {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box
+}
+
+.iqdropdown *::after,
+.iqdropdown *::before {
+    box-sizing: inherit
+}
+
+.iqdropdown *:not(input) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.iqdropdown *:focus {
+    outline: none
+}
+
+.iqdropdown h1,
+.iqdropdown h2,
+.iqdropdown h3,
+.iqdropdown h4,
+.iqdropdown h5,
+.iqdropdown h6{
+    margin: 0
+}
+
+.iqdropdown p {
+    margin: 0
+}
+
+.iqdropdown ul,
+.iqdropdown ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.iqdropdown a  {
+    cursor: pointer
+}
+
+.iqdropdown button  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0;
+    padding: 0
+}
+
+.iqdropdown select::-ms-expand  {
+    display: none
+}
+
+.iqdropdown input::-ms-clear {
+    display: none;
+    height: 0;
+    width: 0
+}
+
+.iqdropdown .icon-decrement {
+    display: inline-block;
+    height: 28px;
+    margin: 0;
+    min-width: 28px;
+    position: absolute;
+    width: 28px;
+    top: 10px;
+    left: 13px;
+}
+
+.iqdropdown .icon-decrement::before  {
+    content: '-';
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    right: 23px;
+}
+
+.button-increment {
+    position: relative;
+}
+
+.icon-increment {
+    display: inline-block;
+    height: 30px;
+    margin: auto;
+
+    position: absolute;
+    width: 30px;
+    top: 29px;
+    left: 13px;
+}
+
+.iqdropdown .icon-increment::before {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    content: '+';
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    right: 22px;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+.iqdropdown .iqdropdown-menu {
+    background-color: #FFFFFF;
+    cursor: default;
+    display: none;
+    left: 0;
+    margin: -6px -1px -1px;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    transition: all 0.2s ease-in-out;
+    z-index: 9;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.05));
+}
+
+.iqdropdown .iqdropdown-menu-option  {
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: 37px;
+    padding: 0px 13px 8px 13px;
+    margin-left: 1px;
+}
+
+.iqdropdown .iqdropdown-menu-option:last-child  {
+    border: 0;
+
+}
+
+.iqdropdown .iqdropdown-menu-close{
+    color: #002674;
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    margin: 20px 0;
+    padding: 0 15px;
+    text-align: center;
+    width: 100%
+}
+
+.iqdropdown.menu-open .iqdropdown-menu {
+    display: block;
+    padding-top: 5px;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .iqdropdown .iqdropdown-menu.mobile-top-menu {
+        top: -285px
+    }
+}
+
+.iqdropdown-content {
+    flex: 1;
+    padding-right: 19px
+}
+
+.iqdropdown-item {
+    width: 133px;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 1);
+    font-family: "montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700
+}
+.iqdropdown .iqdropdown-item-controls {
+    position: relative;
+    display: flex;
+    height: 30px;
+}
+
+
+.iqdropdown .iqdropdown-item-controls .counter {
+    color: rgba(31, 32, 65, 1);
+    font-family: "montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    padding: 7px 12px;
+    width: 32px;
+}
+.iqdropdown .iqdropdown-item-controls button {
+    align-items: center;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding-right: 5px;
+    transition: all 0.2s ease-in-out
+}
+
+.iqdropdown .iqdropdown-item-controls button:hover {
+    background-color: #eee
+}
+
+.iqdropdown .iqdropdown-item-controls button.button-decrement{
+    position: relative;
+    border-radius: 50%;
+}
+
+.iqdropdown .iqdropdown-item-controls button.button-increment {
+    position: relative;
+    border-radius: 50%;
+}
+
+.iqdropdown {
+    align-items: flex-start;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, .25);
+    border-radius: 2px;
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: space-between;
+    padding: 10px 14px;
+    position: relative;
+    width: 266px;
+    margin-bottom: 18px;
+}
+
+.iqdropdown .iqdropdown-selection {
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    flex: 1;
+    right: 0px;
+    bottom: 1px;
+    position: relative;
+    color: rgba(31, 32, 65, 0.75);
+    width: 160px;
+    margin-top: 0px;
+    padding-right: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.iqdropdown .iqdropdown-selection::after {
+    font-family: "Material Icons", sans-serif;
+    font-size: 24px;
+    content: '\e5cf';
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    left: 217px;
+    top: 1px;
+    z-index: 9;
+}
+
+.iqdropdown.menu-open{
+    display: block;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.iqdropdown.menu-open .iqdropdown-selection {
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    flex: 1;
+    right: 0px;
+    bottom: 1px;
+    position: relative;
+    color: rgba(31, 32, 65, 0.75);
+    width: 260px;
+    margin-top: 0px;
+    padding-right: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.iqdropdown.menu-open .iqdropdown-selection::after{
+
+    position: absolute;
+    font-family: "Material Icons", sans-serif;
+    font-size: 24px;
+    content: '\e5cf';
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    right: 0px;
+    top: 0px;
+    z-index: 999999;
+}
+
+.iqdropdown-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 7px 10px 14px;
+    &__apply,
+    &__clear {
+        @include h3-font;
+        color: $pur;
+        text-transform: uppercase;
+    }
+}
+/*# sourceMappingURL=item-quantity-dropdown.min.css.map*/
