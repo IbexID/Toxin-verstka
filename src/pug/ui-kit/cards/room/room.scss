@@ -1,0 +1,51 @@
+
+.room {
+    height: 257px;
+    width: 268px;
+    background-color: #fff;
+    @include shadow;
+    border: none;
+
+    &__info-wrapper {
+        margin: 0px 16px 19px 20px;
+    }
+
+    &__img img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: 151px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__number {
+        display: flex;
+        align-items: baseline;
+        justify-content: start;
+    }
+
+    &__price {
+        margin-top: 1px;
+        margin-right: 1px;
+    }
+
+    &__rating {
+        padding-top: 10px;
+        padding-right: 4px;
+        border-top: 1px solid rgba(31, 32, 65, 0.1);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__rating-text {
+        margin-top: 2px;
+    }
+}
+
+
+

@@ -9,6 +9,37 @@
 @import '../pug/ui-kit/headers/footer/footer.scss';
 @import '../pug/ui-kit/headers/header/header.scss';
 @import '../pug/ui-kit/headers/header-logged/header-logged.scss';
+@import '../pug/ui-kit/cards/book-form/book-form.scss';
+@import '../pug/ui-kit/cards/calendar/calendar.scss';
+@import '../pug/ui-kit/cards/login-form/login-form.scss';
+@import '../pug/ui-kit/cards/register-form/register-form.scss';
+@import '../pug/ui-kit/cards/room/room.scss';
+@import '../pug/ui-kit/cards/room-finder/room-finder.scss';
+@import '../pug/ui-kit/cards/roomluxe/roomluxe.scss';
+
+@import '../pug/ui-kit/form/subscription-text-field/subscription-text-field.scss';
+@import '../pug/ui-kit/form/bullet-list/bullet-list.scss';
+@import '../pug/ui-kit/form/expandable-checkbox-list/expandable-checkbox-list.scss';
+@import '../pug/ui-kit/form/text-field/text-field.scss';
+@import '../pug/ui-kit/form/checkbox-buttons/checkbox-buttons.scss';
+@import '../pug/ui-kit/form/rate/rate.scss';
+@import '../pug/ui-kit/form/like/like.scss';
+@import '../pug/ui-kit/form/buttons/button/button.scss';
+@import '../pug/ui-kit/form/buttons/button-tr/button-tr.scss';
+@import '../pug/ui-kit/form/buttons/icon-link/icon-link.scss';
+@import '../pug/ui-kit/form/rich-checkbox-buttons/rich-checkbox-buttons.scss';
+@import '../pug/ui-kit/form/pay-button/pay-button.scss';
+@import '../pug/ui-kit/form/pagination/pagination.scss';
+@import '../pug/ui-kit/form/ups/ups.scss';
+@import '../pug/ui-kit/form/toggle/toggle.scss';
+@import '../pug/ui-kit/form/review/review.scss';
+@import '../pug/ui-kit/form/range-slider/range-slider.scss';
+@import '../pug/ui-kit/form/radio-buttons/radio-buttons.scss';
+@import '../pug/ui-kit/form/masked-text-field/masked-text-field.scss';
+@import '../pug/ui-kit/form/filter-date-dropdown/filter-date-dropdown.scss';
+@import '../pug/ui-kit/form/date-dropdown/date-dropdown.scss';
+@import '../pug/ui-kit/form/guest-dropdown/guest-dropdown.scss';
+@import '../pug/ui-kit/form/dropdown/dropdown.scss';
 
 .body--gray{
     background: #F4F4F6;
@@ -44,388 +75,63 @@
     }
 }
 
-.room-finder {
-    background: #fff;
-    width: 380px;
-    height: 374px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    margin-bottom: 0px;
 
-    &__container {
-        padding: 0 30px;
-    }
-
-    &__text {
-        padding: 40px 0 12px;
-        @include h1-font;
-        color: $ds100;
-    }
-
-    &__date {
-        display: flex;
-        height: 64px;
-        margin-bottom: 31px;
-    }
-
-    &__button-wrapper {
-        display: flex;
-        justify-content: center;
-        margin-left: 1px;
-        margin-top: 30px;
-        width: 320px;
-        margin-bottom: 30px;
-
-    }
-
-    &__button--wide {
-        width: 320px;
-    }
-}
-
-.air-datepicker-cell+.-current- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.book-form {
+.form {
     background-color: #fff;
-    width: 380px;
-    height: 512px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 40px 29px 30px;
-    margin-left: 1px;
-
-    &__room {
-        display: flex;
-        justify-content: space-between;
-        width: 320px;
-        align-items: baseline;
-        padding-bottom: 10px;
-        margin-right: 1px;
-    }
-
-    &__room-info {
-        display: flex;
-        align-items: baseline;
-    }
-
-    &__room-text {
-        display: inline;
-        @include h1-font;
-        font-size: 25px;
-    }
-    &__room-number .book-form__room-text:nth-of-type(2){
-        margin: 0 3px;
-    }
-
-    &__room-text--small {
-        @include text-font;
-        line-height: 17px;
-        font-weight: 700;
-    }
-
-    &__room-text--big {
-        @include text-font;
-        font-weight: 700;
-        font-size: 19px;
-        line-height: 23px;
-    }
-
-    &__room-text--class {
+    width: 100%;
+    height: max-content;
+    padding-left: 110px;
+    padding-top: 110px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr 1fr);
+    &__title {
+        margin-top: 10px;
         @include h3-font;
-        color: $pur;
-        width: 40px;
-        margin-right: 5px;
-        margin-left: 4px;
-        margin-bottom: 1px;
-        padding-right: 2px;
         text-transform: uppercase;
-    }
-
-    &__room-text--card {
-        margin-left: 6px;
-    }
-
-    &__room-price {
-        margin-left: 10px;
-    }
-
-    &__room-price--nomargin {
-        margin-left: 0;
-    }
-
-    &__room-text--name {
-        @include h3-font;
-        color: $ds50;
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    &__room-text--price {
-        @include text-font;
-        color: $ds50;
-        line-height: 18px;
-        font-weight: 700;
-    }
-
-    &__room-text--normalprice {
-        font-weight: 400;
-    }
-
-    &__summary {
-        display: flex;
-        height: 102px;
-        width: 320px;
-        margin-left: 1px;
-        flex-direction: row;
         margin-bottom: 5px;
     }
-
-    &__summary-block {
-        display: flex;
-        flex-direction: column;
-        margin-right: 5px;
+    &__title--acc{
+        margin-bottom: 5px;
     }
-
-    &__summary-line {
-        @include text-font;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        line-height: 24px;
-        max-width: 214px;
-
-        &:last-of-type {
-            line-height: 18px;
-            margin-top: 3px;
-        }
-    }
-
-    &__summary-icon,
-    &__summary-price {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__summary-icon {
-        margin-right: 22px;
-    }
-
-    .book-form__summary-span {
-        text-align: center;
-        @include text-font;
-        line-height: 20px;
-        font-weight: 700;
-        color: $ds25;
-        width: 20px;
-        height: 20px;
-        border: 1px solid $ds25;
-        border-radius: 50%;
-        justify-content: space-between;
-        margin-bottom: 15px;
-
-        &:first-of-type {
-            opacity: 0;
-        }
-    }
-
-    &__summary-price {
-        @include text-font;
-        width: 57px;
-        align-items: flex-end;
-    }
-
-    &__summary-cost {
-
-        margin-bottom: 10px;
-    }
-
-    &__total {
-        width: 320px;
-        display: flex;
-        justify-content: space-between
-    }
-
-    &__total-line {
-        @include h2-font;
-        margin: 30px 0 20px;
-    }
-
-    &__button-wrapper {
-        margin-bottom: 30px;
-    }
-}
-
-.calendar {
-    width: 320px;
-    height: 369px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-
-.register-form {
-    width: 380px;
-    height: 645px;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    padding: 40px 29px 45px;
-    margin-bottom: 20px;
-    @include shadow;
-    .form__h1title{
-        margin-bottom: 21px;
-    }
-    &__sex {
-        padding-top: 5px;
-        display: flex;
-        flex-direction: row;
-        margin: 3px 0 7px;
-        @include text-font;
-    }
-
-    &__birthday-label,
-    &__account-label {
-        @include h3-font;
-        text-transform: uppercase;
-        margin: 10px 0;
-    }
-
-    &__subscription-label {
-        @include text-font;
-    }
-
-    &__button-text {
-        @include h3-font;
-        text-transform: uppercase;
-        color: #fff;
-    }
-
-    &__button-arrow {
-        color: #fff;
-    }
-
-    &__login {
-        width: 320px;
-        padding-top: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between
-    }
-
-    &__login-text {
-        @include text-font;
-        line-height: 18px;
-        color: rgba(0, 0, 0, 1)
-    }
-}
-
-.register-form__cred-input,
-.register-form__birthday-input,
-.register-form__account-input {
-    height: 44px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    width: 320px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    margin-bottom: 10px;
-}
-
-.register-form__cred-input::placeholder,
-.register-form__birthday-input::placeholder,
-.register-form__account-input::placeholder {
-    @include text-font;
-
-    line-height: 18px;
-    color: $ds25;
-    padding: 13px 273px 13px 15px;
-}
-
-.login-form {
-    width: 380px;
-    min-height: 358px;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    padding: 39px 30px 45px;
-    @include shadow;
-    .form__h1title{
-        margin-bottom: 21px;
-    }
-    &__button {
-        margin-top: 20px;
-        margin-bottom: 28px;
-    }
-
-    &__login {
-        width: 320px;
-        padding-top: 2px;
-        @include text-font;
-        line-height: 18px;
-        color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between
-    }
-
-    &__login-text {
-        width: 164px;
-    }
-}
-
-.room,
-.roomluxe {
-    height: 257px;
-    width: 268px;
-    background-color: #fff;
-    @include shadow;
-    border: none;
-
-    &__info-wrapper {
-        margin: 0px 16px 19px 20px;
-    }
-
-    &__img img {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        height: 151px;
-    }
-
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    &__number {
-        display: flex;
-        align-items: baseline;
-        justify-content: start;
-    }
-
-    &__price {
-        margin-top: 1px;
+    &__h1title{
+        @include h1-font;
+        text-transform: initial;
+        margin-bottom: 23px;
         margin-right: 1px;
     }
-
-    &__rating {
-        padding-top: 10px;
-        padding-right: 4px;
-        border-top: 1px solid rgba(31, 32, 65, 0.1);
-        display: flex;
-        justify-content: space-between;
+    &__h2title{
+        @include h2-font;
+        margin-bottom: 20px;
     }
+}
 
-    &__rating-text {
-        margin-top: 2px;
+.like-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 217px;
+    justify-content: space-between;
+}
+.space{
+    height: 40px;
+    width: 200px;
+}
+
+.datedropdown-container {
+    display: flex;
+}
+
+
+.search__filter{
+    .filterdate .date-dropdown__icon{
+        left: 232px;
+    }
+    .filterdate__input{
+        width: 266px;
     }
 }
 
@@ -436,7 +142,7 @@
         background-size: cover;
         height: 900px;
         width: 100%;
-        background-image: url('../images/background.jpg');
+        background-image: url('../assets/images/background.jpg');
     }
     &__container{
         height: 830px;
@@ -462,7 +168,7 @@
 .registration {
     &__main {
         position: relative;
-        background: url("../images/background2.jpg");
+        background: url("../assets/images/background2.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -483,7 +189,7 @@
 
 .signin {
     &__main {
-        background: url("../images/background3.jpg");
+        background: url("../assets/images/background3.jpg");
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
@@ -595,7 +301,6 @@
     }
 
     &__img-container {
-        margin-left: -1px;
         display: flex;
 
         &:first-child {
@@ -744,4 +449,3 @@
         }
     }
 }
-@import 'forms.scss';

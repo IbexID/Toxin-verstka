@@ -1,0 +1,31 @@
+.login-form {
+    width: 380px;
+    min-height: 358px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 39px 30px 45px;
+    @include shadow;
+    .form__h1title{
+        margin-bottom: 21px;
+    }
+    &__button {
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+
+    &__login {
+        width: 320px;
+        padding-top: 2px;
+        @include text-font;
+        line-height: 18px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    &__login-text {
+        width: 164px;
+    }
+}

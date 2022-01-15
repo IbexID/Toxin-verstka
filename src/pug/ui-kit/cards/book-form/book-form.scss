@@ -1,0 +1,171 @@
+.book-form {
+    background-color: #fff;
+    width: 380px;
+    height: 512px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 29px 30px;
+    margin-left: 1px;
+
+    &__room {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+        align-items: baseline;
+        padding-bottom: 10px;
+        margin-right: 1px;
+    }
+
+    &__room-info {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__room-text {
+        display: inline;
+        @include h1-font;
+        font-size: 25px;
+    }
+    &__room-number .book-form__room-text:nth-of-type(2){
+        margin: 0 3px;
+    }
+
+    &__room-text--small {
+        @include text-font;
+        line-height: 17px;
+        font-weight: 700;
+    }
+
+    &__room-text--big {
+        @include text-font;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    &__room-text--class {
+        @include h3-font;
+        color: $pur;
+        width: 40px;
+        margin-right: 5px;
+        margin-left: 4px;
+        margin-bottom: 1px;
+        padding-right: 2px;
+        text-transform: uppercase;
+    }
+
+    &__room-text--card {
+        margin-left: 6px;
+    }
+
+    &__room-price {
+        margin-left: 10px;
+    }
+
+    &__room-price--nomargin {
+        margin-left: 0;
+    }
+
+    &__room-text--name {
+        @include h3-font;
+        color: $ds50;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__room-text--price {
+        @include text-font;
+        color: $ds50;
+        line-height: 18px;
+        font-weight: 700;
+    }
+
+    &__room-text--normalprice {
+        font-weight: 400;
+    }
+
+    &__summary {
+        display: flex;
+        height: 102px;
+        width: 320px;
+        margin-left: 1px;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+
+    &__summary-block {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+    }
+
+    &__summary-line {
+        @include text-font;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        line-height: 24px;
+        max-width: 214px;
+
+        &:last-of-type {
+            line-height: 18px;
+            margin-top: 3px;
+        }
+    }
+
+    &__summary-icon,
+    &__summary-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__summary-icon {
+        margin-right: 22px;
+    }
+
+    .book-form__summary-span {
+        text-align: center;
+        @include text-font;
+        line-height: 20px;
+        font-weight: 700;
+        color: $ds25;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $ds25;
+        border-radius: 50%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        &:first-of-type {
+            opacity: 0;
+        }
+    }
+
+    &__summary-price {
+        @include text-font;
+        width: 57px;
+        align-items: flex-end;
+    }
+
+    &__summary-cost {
+
+        margin-bottom: 10px;
+    }
+
+    &__total {
+        width: 320px;
+        display: flex;
+        justify-content: space-between
+    }
+
+    &__total-line {
+        @include h2-font;
+        margin: 30px 0 20px;
+    }
+
+    &__button-wrapper {
+        margin-bottom: 30px;
+    }
+}

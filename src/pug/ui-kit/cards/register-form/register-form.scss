@@ -1,0 +1,76 @@
+.register-form {
+    width: 380px;
+    height: 645px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 40px 29px 45px;
+    margin-bottom: 20px;
+    @include shadow;
+    .form__h1title{
+        margin-bottom: 21px;
+    }
+    &__sex {
+        padding-top: 5px;
+        display: flex;
+        flex-direction: row;
+        margin: 3px 0 7px;
+        @include text-font;
+    }
+
+    &__birthday-label,
+    &__account-label {
+        @include h3-font;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    &__subscription-label {
+        @include text-font;
+    }
+
+    &__button-text {
+        @include h3-font;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__button-arrow {
+        color: #fff;
+    }
+
+    &__login {
+        width: 320px;
+        padding-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    &__login-text {
+        @include text-font;
+        line-height: 18px;
+        color: rgba(0, 0, 0, 1)
+    }
+}
+
+.register-form__cred-input,
+.register-form__birthday-input,
+.register-form__account-input {
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 320px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    margin-bottom: 10px;
+}
+
+.register-form__cred-input::placeholder,
+.register-form__birthday-input::placeholder,
+.register-form__account-input::placeholder {
+    @include text-font;
+
+    line-height: 18px;
+    color: $ds25;
+    padding: 13px 273px 13px 15px;
+}

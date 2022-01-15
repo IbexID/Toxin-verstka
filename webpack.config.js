@@ -21,7 +21,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin(),
         ...PAGES.map(page => new HtmlWebpackPlugin({
-            favicon: `${PATHS.src}\\favicons\\favicon.ico`,
+            favicon: `${PATHS.src}\\assets\\favicons\\favicon.ico`,
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`,
           })),
@@ -45,14 +45,14 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name][ext][query]'
+                    filename: 'assets/images/[name][ext][query]'
                   }
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf|)$/,
                 type: 'asset',
                 generator: {
-                  filename: 'fonts/[name][ext][query]'
+                  filename: 'assets/fonts/[name][ext][query]'
                 }
             },
             {

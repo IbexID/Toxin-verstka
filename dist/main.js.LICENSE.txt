@@ -1,4 +1,11 @@
 /*!
+ * Chart.js v3.6.2
+ * https://www.chartjs.org
+ * (c) 2021 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*!
  * Sizzle CSS Selector Engine v2.3.6
  * https://sizzlejs.com/
  *
@@ -32,6 +39,6 @@
  */
 
 /*! jQuery UI - v1.12.1 - 2018-05-02
-* http://jqueryui.com
-* Includes: widget.js, keycode.js, widgets/mouse.js, widgets/slider.js
-* Copyright jQuery Foundation and other contributors; Licensed MIT */
+ * http://jqueryui.com
+ * Includes: widget.js, keycode.js, widgets/mouse.js, widgets/slider.js
+ * Copyright jQuery Foundation and other contributors; Licensed MIT */

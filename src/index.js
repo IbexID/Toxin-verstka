@@ -1,15 +1,13 @@
 import $ from 'jquery'
-import '../src/styles/jquery-ui.css'
 import AirDatepicker from 'air-datepicker'
 import slick from 'slick-carousel'
 import 'air-datepicker/air-datepicker.css'
-import './js/jquery-ui.min'
-import './js/jquery.inputmask.min'
-import '../src/styles/item-quantity-dropdown.min.css'
+import './pug/ui-kit/form/range-slider/jquery-ui.min'
+import './pug/ui-kit/form/masked-text-field/jquery.inputmask.min'
 import './styles/style.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import '../src/js/item-quantity-dropdown.min'
+import './pug/ui-kit/form/dropdown/item-quantity-dropdown.min'
 import './pug/index.pug'
 import Chart from 'chart.js/auto';
 

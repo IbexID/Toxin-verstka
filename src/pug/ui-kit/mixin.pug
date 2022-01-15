@@ -1,14 +1,14 @@
 mixin twitter
     a.footer__copyright-link(href='#')
-        img.footer__copyright-img(alt='twitter', src=require("../images/svg/twitter.png"))
+        img.footer__copyright-img(alt='twitter', src=require("../assets/images/svg/twitter.png"))
 mixin facebook
     a.footer__copyright-link(href='#')
-        img.footer__copyright-img(alt='facebook', src=require("../images/svg/facebook.png"))
+        img.footer__copyright-img(alt='facebook', src=require("../assets/images/svg/facebook.png"))
 mixin instagram
     a.footer__copyright-link(href='#')
-        img.footer__copyright-img(alt='instagram', src=require("../images/svg/instagram.png"))
+        img.footer__copyright-img(alt='instagram', src=require("../assets/images/svg/instagram.png"))
 mixin logo(classname)
-    img(alt="logo" src=require("../images/svg/logo.svg"))
+    img(alt="logo" src=require("../assets/images/svg/logo.svg"))
 mixin symbol(name, classname)
     span.material-icons(class=classname) #{name}
 mixin symbol-out(name, classname)
@@ -221,29 +221,29 @@ mixin signin
             .login-form__login-link
                 +bigbutton-tr('создать')
 mixin room1
-    img(alt="room 1" src=require("../images/rooms/1.jpg"))
+    img(alt="room 1" src=require("../assets/images/rooms/1.jpg"))
 mixin room2
-    img(alt="room 2" src=require("../images/rooms/2.jpg"))
+    img(alt="room 2" src=require("../assets/images/rooms/2.jpg"))
 mixin room3
-    img(alt="room 3" src=require("../images/rooms/3.jpg"))
+    img(alt="room 3" src=require("../assets/images/rooms/3.jpg"))
 mixin room4
-    img(alt="room 4" src=require("../images/rooms/4.jpg"))
+    img(alt="room 4" src=require("../assets/images/rooms/4.jpg"))
 mixin room5
-    img(alt="room 5" src=require("../images/rooms/5.jpg"))
+    img(alt="room 5" src=require("../assets/images/rooms/5.jpg"))
 mixin room6
-    img(alt="room 6" src=require("../images/rooms/6.jpg"))
+    img(alt="room 6" src=require("../assets/images/rooms/6.jpg"))
 mixin room7
-    img(alt="room 7" src=require("../images/rooms/7.jpg"))
+    img(alt="room 7" src=require("../assets/images/rooms/7.jpg"))
 mixin room8
-    img(alt="room 8" src=require("../images/rooms/8.jpg"))
+    img(alt="room 8" src=require("../assets/images/rooms/8.jpg"))
 mixin room9
-    img(alt="room 9" src=require("../images/rooms/9.jpg"))
+    img(alt="room 9" src=require("../assets/images/rooms/9.jpg"))
 mixin room10
-    img(alt="room 10" src=require("../images/rooms/10.jpg"))
+    img(alt="room 10" src=require("../assets/images/rooms/10.jpg"))
 mixin room11
-    img(alt="room 11" src=require("../images/rooms/11.jpg"))
+    img(alt="room 11" src=require("../assets/images/rooms/11.jpg"))
 mixin room12
-    img(alt="room 12" src=require("../images/rooms/12.jpg"))
+    img(alt="room 12" src=require("../assets/images/rooms/12.jpg"))
 mixin room(img1, img2, img3, img4, roomnum, graytextprice, rating, reviewnum)
     .room 
         .room__img
@@ -343,7 +343,7 @@ mixin review(name, date, avatar, text, number, checked, clicked)
     .review
         .review__profile
             .review__profile-avatar
-                img.review__profile-img(alt="profile pic" src=require("../images/reviews" + avatar))
+                img.review__profile-img(alt="profile pic" src=require("../assets/images/reviews" + avatar))
             .review__like 
                 +like(number, checked, clicked)
         .review__info

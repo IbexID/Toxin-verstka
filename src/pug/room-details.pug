@@ -8,10 +8,10 @@ html
             include ui-kit/headers/header/header
             .roomdet__wrapper
                 .roomdet__img-container 
-                    img.roomdet__img(src=require("../images/roomdetail/roomdet1.jpg"), alt="room 1")
+                    img.roomdet__img(src=require("../assets/images/roomdetail/roomdet1.jpg"), alt="room 1")
                     .roomdet__img-row
-                        img.roomdet__img(src=require("../images/roomdetail/roomdet2.jpg"), alt="room 2")
-                        img.roomdet__img(src=require("../images/roomdetail/roomdet3.jpg"), alt="room 3")
+                        img.roomdet__img(src=require("../assets/images/roomdetail/roomdet2.jpg"), alt="room 2")
+                        img.roomdet__img(src=require("../assets/images/roomdetail/roomdet3.jpg"), alt="room 3")
                 .roomdet__info-wrapper
                     .roomdet__info-container
                         .roomdet__info
@@ -39,7 +39,7 @@ html
                             +h2heading('Отмена')
                             p.roomdet__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                     .roomdet__book-form
-                        include ui-kit/cards/book-form
+                        include ui-kit/cards/book-form/book-form
             .footer__wrapper
                 .footer__border
                 include ui-kit/headers/footer/footer
