@@ -27,7 +27,7 @@ mixin button-tr(name)
         button.button-tr #{name}
 mixin bigbutton-tr(name)
     .button__gradient.button__gradient--big
-        button.button.button-tr.button--big #{name}
+        button.button.button--big #{name}
 mixin button(name)
     button.button #{name}
 mixin calendar(id)
@@ -84,11 +84,10 @@ mixin pass-field(classname)
         label.text-field__label
             input.text-field__input(type="text", name="password" placeholder='Пароль')
 mixin radio(value, name, title)
-    form.radio-buttons__wrapper
-        label.radio-buttons__label
-            input.radio-buttons__input(type='radio' name=name value=value)
-            span.radio-buttons__style 
-            | #{title}
+    label.radio-buttons__label
+        input.radio-buttons__input(type='radio' name=name value=value)
+        span.radio-buttons__style 
+        | #{title}
 mixin toggle(text)
     form.toggle 
         label.toggle__label

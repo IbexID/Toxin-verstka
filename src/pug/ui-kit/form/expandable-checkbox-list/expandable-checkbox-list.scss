@@ -78,13 +78,15 @@
 .expandable-list__title-input:checked~.expandable-list__expand,
 
 .expandable-list__title-input~.expandable-list__list {
-    display: none;
+    transition: all .3s;
+    opacity: 0;
 }
 
 .expandable-list__title-input:checked~.expandable-list__collapse,
 .expandable-list__title-input~.expandable-list__expand,
 .expandable-list__title-input:checked~.expandable-list__list {
-    display: block;
+    opacity: 1;
+    transition: all .3s;
 }
 
 

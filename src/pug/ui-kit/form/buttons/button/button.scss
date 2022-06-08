@@ -11,8 +11,7 @@
     text-align: center;
     padding: 10px 20px 9px 19px;
 
-    &__force-hov,
-    &:hover {
+    &__force-hov {
         opacity: .5;
     }
 
@@ -27,6 +26,6 @@
     position: absolute;
     left: 2px;
     bottom: 2px;
-    height: 40px;
-    width:95px;
+    height: 40px !important;
+    width:95px !important;
 }

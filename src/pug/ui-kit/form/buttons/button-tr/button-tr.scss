@@ -41,7 +41,7 @@
 .button__gradient--big{
     position: relative;
     min-width: 99px;
-    height: 44px;
+    height: 44px !important;
     background: linear-gradient(to bottom, (#BC9CFF 0%, #8BA4F9 100%));
     margin-top: 0px;
     border-radius: 24px;
@@ -55,7 +55,8 @@
     border-radius: 24px;
 }
 .button__gradient--big:hover{
-    height: 44px;
+    opacity: 1;
+    height: 44px !important;
 }
 
 .button-tr:hover {
@@ -67,6 +68,6 @@
     position: absolute;
     left: 2px;
     bottom: 2px;
-    height: 40px;
+    height: 40px !important;
     width:95px;
 }

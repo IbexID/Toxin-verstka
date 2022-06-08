@@ -4,8 +4,9 @@
         +text-field('Имя', 'name', 'text-field__fit')
         +text-field('Фамилия', 'surname', 'text-field__fit')
     .register-form__sex
-        +radio('male', 'sex', 'Мужчина')
-        +radio('female', 'sex', 'Женщина')
+        form.radio-buttons__wrapper
+            +radio('male', 'sex', 'Мужчина')
+            +radio('female', 'sex', 'Женщина')
     .register-form__birthday
         +heading('дата рождения')
         +calendarwide('datedropdown', 'date-dropdown__input--wide', 'date-dropdown__icon--inv')
